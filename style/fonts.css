@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'ProximaNovaRegular';
+    src: url('./fonts/ProximaNovaRegular.ttf')  format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'ProximaNovaBold';
+    src: url('./fonts/ProximaNovaBold.ttf')  format('truetype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'ProximaNovaThin';
+    src: url('./fonts/ProximaNovaThinIt.ttf')  format('truetype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'FuturaDemicRegular';
+    src: url('./fonts/FuturademiCRegular.ttf')  format('truetype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'FuturaBookRegular';
+    src: url('./fonts/FuturaBookRegular.ttf')  format('truetype');
+    font-weight: 600;
+}

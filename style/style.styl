@@ -1,0 +1,705 @@
+@import url('../min.css');
+@import url('../fonts.css')
+
+$linkColor = #00D4BF
+
+header{
+    background-color: white
+    .header-content{
+        display flex
+        justify-content: space-between
+
+        .header-content__logo{
+            max-width 232px;
+            margin 5px 5px
+        }
+
+        .header-content__links{
+            width 75%
+            display flex
+            align-items: center
+            
+            @media (max-width:1000px){
+                display: none;
+            }
+
+            .header-content__links-item{
+                position relative
+                cursor pointer
+                height 75px
+                width 100%  
+                display flex
+                align-items: center
+                justify-content: center
+                transition: 0.5s
+
+                .header-content__hidden-links{
+                    display: none
+                }
+
+                a{
+                    font-family: 'ProximaNovaRegular'
+                    font-size: 18px
+                    color: #555555
+                    text-align: center
+
+                    select {
+                        width 100%
+                        border: none
+                        color: #555555
+                        appearance: none;
+                        background-color: transparent;
+                        text-align-last:center;
+                        font-family: 'ProximaNovaRegular'
+                        font-size: 18px
+                        cursor: inherit;
+                        outline: none
+                        
+                        option{
+                            width 100%
+                        }
+                    }
+                }
+
+                &:hover{
+                    background-color: $linkColor    
+                    a{
+                        color: white
+                    }
+                }
+
+                &:hover .header-content__hidden-links{
+                    background-color: white
+                    position absolute
+                    top: 75px
+                    width 100%
+                    display flex
+                    flex-direction: column
+                    a{
+                        color: #555555
+                        &:hover{
+                            color: $linkColor
+                        }
+                    }
+                }
+            }
+        }
+
+        .hamburger-menu{
+            display: none;
+
+            #menu__toggle {
+                opacity: 0;
+            }
+
+            @media (max-width:1000px) {
+                display: flex;
+
+                .menu__btn {
+                    display: flex;
+                    align-items: center; 
+                    position: absolute;
+                    top:20px;
+                    right: 30px;
+                    width: 26px;
+                    height: 26px;
+                    cursor: pointer;
+                    z-index: 1;
+
+                    span,span::before, span::after{
+                        display: block;
+                        position: absolute;
+                        width: 100%;
+                        height: 2px;
+                        background-color: #616161;
+                        transition-duration: .25s;
+                    }
+                    span::before{
+                        content: '';
+                        top: -8px;
+                    }
+                    span::after{
+                        content: '';
+                        top: 8px;
+                    }
+                }
+
+                .menu__box {
+                    display: block;
+                    position: fixed;
+                    visibility: hidden;
+                    top: 0;
+                    right: -100%;
+                    width: 300px;
+                    height: 100%;
+                    margin: 0;
+                    padding: 80px 0;
+                    list-style: none;
+                    text-align: center;
+                    background-color: #ECEFF1;
+                    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+                    transition-duration: .25s;
+                }
+
+                .menu__item {
+                    display: block;
+                    padding: 12px 24px;
+                    color: #333;
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 20px;
+                    font-weight: 600;
+                    text-decoration: none;
+                    transition-duration: .25s;
+
+                    &:hover {
+                        background-color: #00D4BF;
+                    }
+                }
+
+                #menu__toggle:checked ~ {
+                    .menu__box {
+                        visibility: visible;
+                        right:  0;
+                    }
+                    .menu__btn > span {
+                        transform: rotate(45deg);
+                    }
+                    .menu__btn > span::before {
+                        top: 0;
+                        transform: rotate(0);
+                    }
+                    .menu__btn > span::after {
+                        top: 0;
+                        transform: rotate(90deg);
+                    }
+                }
+            }   
+        } 
+    }
+}
+
+main{
+    width 100%
+    height 100%
+
+    .back-img-house{
+        background-image: url('../img/mainBacImg.png')
+    
+        section{
+            width 70%
+            margin auto
+            .section-content{
+                h1{
+                    font-size: 96px
+                    font-family: FuturaDemicRegular
+
+                    @media (max-width 1200px){
+                        font-size: 60px
+                    }
+                }    
+                span{
+                    color: $linkColor
+                }
+                .section-content__ul{
+                    width 60%
+                    list-style: none;
+                    margin-top: 5%;
+
+                    @media (max-width 1200px){
+                        width 100%
+                    }
+                }
+                .section-content__li{
+                    color: white;
+                    font-family: 'ProximaNovaRegular';
+                    font-size: 24px;
+                }
+                .section-content__li::before {
+                    content: "•"; 
+                    color: #00D4BF; 
+                    margin-right: 10px;
+                }
+                .section-content__button{
+                    margin 400px auto 0
+                    width 350px
+                    display flex
+                    flex-direction: column
+                    button{
+                        cursor pointer
+                        font-size: 18px
+                        font-family: 'FuturaDemicRegular'
+                        color: white
+                        height 90px
+                        border: none
+                        background-color: rgba($linkColor,0.6)
+                        transition: 0.5s
+                        &:hover{
+                            background-color: rgba($linkColor,1)
+                        }
+                    }
+                    span{
+                        margin-top 50px
+                        color white
+                        text-align: center
+                        font-family: ProximaNovaRegular
+                    }
+                }
+            }
+        }
+    }
+
+    .back-img-gradient{
+        margin-top -110px
+        background-image: url('../img/BacGradient.png')
+        padding-top: 250px;
+
+        section{
+            width 70%
+            margin auto
+
+            @media (max-width 1200px){
+                width 100%
+            }
+
+            .section-content{
+                text-align: center
+                h2{
+                    font-size: 48px
+                    font-family: FuturaDemicRegular
+                    color: white
+                    @media (max-width 1200px){
+                        font-size: 35px
+                    }
+                }    
+                span{
+                    font-size: 24px
+                    font-family: ProximaNovaRegular
+                    color:white
+                }
+                .section-content__blocks{
+                    border: solid 1px black
+                    display flex
+                    margin-top:50px
+                    @media (max-width 1200px){
+                        flex-wrap: wrap    
+                    }
+                    .section-content__blocks-item{
+                        width 100%
+                        background-color: #0D9ECC
+                        border: solid 1px #0886AF
+                        transition: 0.5s
+
+                        &:hover{
+                            transform: scale(1.1)   
+                            background-color:#0DB8A3
+
+                            @media (max-width 1200px){
+                                transform: scale(1)  
+                            }
+                        }
+
+                        @media (max-width 1200px){
+                            width 50%
+                        }
+
+                        img{
+                            height 128px
+                            width auto
+                            margin 20px auto
+                        }
+                        span{
+                            color: white
+                            font-size: 20px
+                            font-family: FuturaDemicRegular
+                        }
+                    }
+                }
+                .section-content__description{
+                    margin-top 80px
+                    color: white
+                    font-size: 18px
+                    font-family: ProximaNovaRegular
+                }
+                .section-content__icons{
+                    margin-top 70px
+                    padding-bottom: 100px
+                    display flex
+                    justify-content: space-around   
+
+                    @media (max-width 1000px){
+                        flex-wrap: wrap
+                    }
+
+                    .section-content__icons-item{
+                        display flex
+                        flex-direction: column
+                        align-items: center
+                        width 20%
+
+                        @media (max-width 1000px){
+                            width 50%
+                        }
+
+                        &:hover span{
+                            transition: 0.5s
+                            color: $linkColor
+                        }
+                        img{
+                            width auto
+                            height 100px
+                            filter: grayscale()
+                        }    
+                        span{
+                            margin-top 15px
+                            font-size: 20px
+                            font-family: FuturaDemicRegular
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .back-img-white{
+        background-color: white
+    
+        section{
+            width 70%
+            margin auto
+            text-align: center
+
+            @media (max-width 1000px){
+                width 100%
+            }
+
+            .section-content{
+                padding-top:100px 
+                padding-bottom: 50px
+                h2{
+                    color: #0088CE
+                    font-size: 60px
+                    font-family: FuturaBookRegular
+
+                    @media (max-width 1000px){
+                        font-size: 50px
+                    }
+                }    
+                p{
+                    color: #555555
+                    font-size: 24px
+                    font-family: ProximaNovaRegular
+                }
+            }
+        }
+    }
+
+    .back-img-blue{
+        background-color: #1A6EA9
+    
+        section{
+            width 70%
+            margin auto
+            
+            @media (max-width 1500px){
+                width 95%
+            }
+
+            .section-content{
+                padding-top:100px 
+                padding-bottom: 50px
+                h2{
+                    color: white
+                    font-size: 24px
+                    font-family: ProximaNovaRegular
+                }   
+
+                .section-content__hr{
+                    width: 90%
+                    margin-left: 0 
+                    border: solid 1px white  
+
+                    @media(max-width 1500px){
+                        width: 100%
+                    }  
+                }
+                
+                .section-content__blocks{
+                    width: 90%
+                    margin-left: 0 
+                    display flex
+                    justify-content: space-between
+
+                    @media (max-width 1500px){
+                        flex-wrap: wrap    
+                        width: 100%
+                    }
+
+                    .section-content__blocks-item{
+                        text-align: center
+                        width 20%
+                        padding 10px
+                        transition: 0.5s
+
+                        &:hover{
+                            transform: scale(1.1)
+                            div{
+                                transition: 0.5s
+                                color: $linkColor
+                            }
+                        }
+
+                        @media (max-width 1353px){
+                            width 50%
+                        }
+
+                        .blocks-item-title{
+                            min-height: 60px
+                            color: white
+                            font-size: 18px
+                            font-family: ProximaNovaRegular
+                        }  
+
+                        .blocks-item-description{
+                            color: white
+                            font-size: 64px
+                            font-family: FuturaDemicRegular
+                        }
+
+                        .blocks-item-bot{
+                            color: white
+                            font-size: 48px
+                            font-family: ProximaNovaRegular
+                        }
+                    }    
+                }
+
+                .section-content__description{
+                    width 60%
+                    color: white
+                    font-size: 18px
+                    font-family: ProximaNovaRegular
+
+                    @media (max-width 1353px){
+                        width 100%
+                    }
+                }
+            }
+        }
+    }
+
+    .back-img-girl{
+        background-image: url('../img/BackWithGirl.png')
+        position relative
+
+        @media(max-width 1500px){
+            display: none
+        }
+
+        .img-girl{
+            pointer-events: none
+            height 500px
+            width 500px
+            position: absolute
+            right 0
+            top:-460px
+            z-index 2
+        }
+        .img-bot{
+            z-index -11
+            pointer-events: none
+            height 100px
+            width 100%
+            position: absolute
+            right 0
+            top: -60px
+        }
+    }
+
+    .tabs-slider{
+        margin-top 40px
+        background-color: white    
+        width 100%
+        .section-content{
+            width 70%
+            margin: 100px auto 0
+            text-align: center
+
+            h2{
+                font-size: 40px
+                font-family: FuturaBookRegular
+                color: #0088CE
+            }
+
+            .tabs-buttons{
+                display flex   
+                justify-content: space-between
+                .tabs-buttons__item{
+                    padding 10px
+                    width 100%
+                    color: #555555
+                    font-family: ProximaNovaRegular
+                    font-size: 20px
+                    cursor pointer
+                    border-bottom: solid 2px #C4C4C4
+                }
+
+                .tabs-buttons__item-choose{
+                    color:#00D4BF
+                    border-bottom: solid 2px #00D4BF
+                }
+            }
+
+            .tabs-info__team{
+                margin-top 100px
+                display flex
+                justify-content: space-between
+
+                border solid 1px blac
+                .tabs-info__avatar{
+                    width 30%
+                    img{
+                        width 332px
+                        height auto
+                    }
+                    h3,h4{
+                        color: #555555
+                        font-family: ProximaNovaRegular
+                    }
+                    h3{
+                        font-size: 24px
+                        margin-top 40px
+                    }
+                }
+                .tabs-info__description{
+                    text-align: left
+                    width 65%
+                    h3,p{
+                        font-size: 24px
+                        color: #555555
+                        font-family: ProximaNovaRegular
+                    }
+                    p{
+                        font-size: 15px
+                        margin-top 20px
+                    }
+                }
+                .tabs-info__slider{
+                    margin-top 50px
+                    display flex
+                    justify-content: space-between
+                    img{
+                        cursor pointer
+                        width 60px
+                        height auto
+                        filter: grayscale()
+                        transition: 0.5s
+                        &:hover{
+                            filter: none
+                        }
+                    }    
+                    .choose-img{
+                        border: solid 1px $linkColor
+                        border-radius: 50%
+                        filter: none
+                    }
+                }
+            }
+
+            .tabs-info__company{
+                margin-top 50px
+                h2{
+                    color: #555555
+                    font-size: 24px
+                    font-family: ProximaNovaRegular
+                }
+                .tabs-info__images{
+                    display flex
+                    justify-content: space-between;
+                    margin-top 50px
+                    .tabs-info__images-item{
+                        width 25%;
+                        display flex
+                        justify-content: center
+                        position relative
+                        img{
+                            height auto
+                            width 225px
+                        }
+                        p{
+                            text-align: center
+                            width 100%
+                            top 20%
+                            position: absolute
+                            color white
+                            font-family: ProximaNovaRegular
+                            font-size: 18px
+                        }
+                    }
+                }
+                .tabs-info__company-description{
+                    margin-top 50px  
+                    p{
+                        color: #555555
+                        font-size: 18px
+                        font-family: ProximaNovaRegular
+                    }  
+                }
+            }
+
+            .tabs-info__showroom{
+                margin-top 50px
+                h2{
+                    color: #555555
+                    font-family: ProximaNovaRegular
+                    font-size: 20px
+                }    
+                .showroom-images{
+                    margin-top 50px
+                    display flex    
+                    justify-content: space-around
+                    img{
+                        width 30%
+                        height auto
+                    }
+                }
+                .showroom-description{
+                    margin-top 50px
+                    color: #555555
+                    font-family: ProximaNovaRegular
+                    h2{
+                        font-size: 24px
+                    }
+                    p{
+                        font-size: 19px
+                    }
+                }
+            }
+
+            .tabs-info__sertidication{
+                margin-top 50px
+                .sertification-images{
+                    display flex
+                    justify-content: space-between
+                    .sertificatino-images__item{
+                        word-break: break-all
+                        width 15%
+                        img{
+                            width 100%
+                            margin auto
+                            box-shadow: -5px 5px 5px 1px #E5E5E5 
+                        }
+                        p{
+                            color: #555555
+                            font-family: ProximaNovaRegular
+                            margin-top 20px
+                        }
+                    }
+                }
+            }
+
+            .tabs-hidden{
+                display: none    
+            }
+        }
+    }
+}
