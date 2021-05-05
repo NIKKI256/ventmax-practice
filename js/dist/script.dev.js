@@ -209,4 +209,29 @@ nextProject.addEventListener('click', function () {
   h2.innerHTML = projectsInfo[projectCount].titleh2;
   h3.innerHTML = projectsInfo[projectCount].titleh3;
   p.innerHTML = projectsInfo[projectCount].descriptp;
+}); //Brands slider
+
+var backBrand = document.querySelector('#backBrand');
+var nextBrand = document.querySelector('#nextBrand');
+var countBrand = 0;
+var imagesBrand = ['/style/img/Brand1.png', '/style/img/Brand2.png', '/style/img/Brand3.png', '/style/img/Brand4.png', '/style/img/Brand5.png', '/style/img/Brand6.png'];
+backBrand.addEventListener('click', function () {
+  var image = document.querySelector('#imageBrand');
+  countBrand--;
+
+  if (countBrand < 0) {
+    countBrand = imagesBrand.length - 1;
+  }
+
+  image.src = imagesBrand[countBrand];
+});
+nextBrand.addEventListener('click', function () {
+  var image = document.querySelector('#imageBrand');
+  countBrand++;
+
+  if (countBrand >= imagesBrand.length - 1) {
+    countBrand = 0;
+  }
+
+  image.src = imagesBrand[countBrand];
 });

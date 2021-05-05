@@ -1003,8 +1003,11 @@ main .projects section .section-content .slider-and-arrows-mob .slider-item img 
   height: 437px;
   width: 100%;
 }
+main .brands {
+  margin-top: 200px;
+}
 main .brands section {
-  width: 70%;
+  width: 90%;
   margin: 25px auto 0;
   text-align: center;
 }
@@ -1014,13 +1017,49 @@ main .brands section {
   }
 }
 main .brands section h2 {
-  font-family: FuturaBookRegular;
+  font-size: 60px;
+  font-family: ProximaNovaRegular;
   color: #0088ce;
 }
 main .brands section h3 {
   font-family: ProximaNovaRegular;
   color: #555;
+  font-size: 20px;
 }
 main .brands section .brands-images {
+  margin-top: 50px;
   display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 1354px) {
+  main .brands section .brands-images {
+    display: none;
+  }
+}
+main .brands section .brands-images .brands-images__item {
+  min-height: 137px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .brands section .brands-images .brands-images__item img {
+  height: auto;
+  width: 200px;
+}
+main .brands section .brands-images-slider {
+  display: none;
+}
+@media (max-width: 1354px) {
+  main .brands section .brands-images-slider {
+    width: 90%;
+    margin: 50px auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 140px;
+  }
+}
+main .brands section .brands-images-slider .arrow {
+  cursor: pointer;
+  height: 40px;
 }

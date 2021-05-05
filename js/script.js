@@ -283,3 +283,33 @@ nextProject.addEventListener('click', () => {
     h3.innerHTML = projectsInfo[projectCount].titleh3
     p.innerHTML = projectsInfo[projectCount].descriptp
 })
+
+//Brands slider
+
+const backBrand = document.querySelector('#backBrand')
+const nextBrand = document.querySelector('#nextBrand')
+var countBrand = 0
+
+const imagesBrand = [
+    '/style/img/Brand1.png','/style/img/Brand2.png',
+    '/style/img/Brand3.png','/style/img/Brand4.png',
+    '/style/img/Brand5.png','/style/img/Brand6.png',
+]
+
+backBrand.addEventListener('click', () => {
+    const image = document.querySelector('#imageBrand')
+    countBrand-- 
+    if(countBrand < 0){
+        countBrand = imagesBrand.length - 1
+    }
+    image.src = imagesBrand[countBrand]
+})
+
+nextBrand.addEventListener('click', () => {
+    const image = document.querySelector('#imageBrand')
+    countBrand++ 
+    if(countBrand >= imagesBrand.length - 1){
+        countBrand = 0
+    }
+    image.src = imagesBrand[countBrand]
+})
