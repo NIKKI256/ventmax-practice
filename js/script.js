@@ -213,3 +213,73 @@ nextSertif.addEventListener('click', () => {
     image.src = imagesSertif[companySertif]
     info.innerHTML = infoSertif[companySertif]
 })
+
+//Projects slider
+
+const backProject = document.querySelector('#backProject')
+const nextProject = document.querySelector('#nextProject')
+var projectCount = 0
+
+const projectsInfo = [
+    {
+        'titleh2' : 'ЛЕОНОВО',
+        'titleh3' : 'Жилой дом — 2500 м2',
+        'descriptp' : `4 приточно-вытяжных установки Enervent
+        с роторным рекуператором <br><br>
+       Вентиляция бассейна <br><br>
+       Мультизональная система кондиционирования Daikin с канальными внутренними блоками`
+    },
+    {
+        'titleh2' : 'ВЫМПЕЛ',
+        'titleh3' : 'Жилой дом — 1800 м2',
+        'descriptp' : `4 приточно-вытяжных установки Enervent с роторным рекуператором 
+        <br><br>
+        Вентиляция бассейна
+        <br><br>
+        Мультизональная система ондиционирования
+        Daikin с канальными внутренними блоками<br><br>
+        Умный дом`
+    },
+    {
+        'titleh2' : 'ПЕСТОВО',
+        'titleh3' : 'Жилой дом — 600 м2',
+        'descriptp' : `2 приточно вытяжных установки Enervent
+        <br><br>
+        Мультизональна система кондиционирования
+        Mitsubishi Electric`
+    },
+    {
+        'titleh2' : 'НАРОФОМИНСК',
+        'titleh3' : 'Жилой дом — 350 м2',
+        'descriptp' : `Энергоэффективный дом класса А+
+        <br><br>
+        Приточно вытяжная установка Enervent
+        c геотермальным охлаждением`
+    }
+]
+
+backProject.addEventListener('click', () => {
+    const h2 = document.querySelector('#projectH2')
+    const h3 = document.querySelector('#projectH3')
+    const p = document.querySelector('#projectP')
+    projectCount--
+    if(projectCount < 0){
+        projectCount = projectsInfo.length - 1
+    }
+    h2.innerHTML = projectsInfo[projectCount].titleh2
+    h3.innerHTML = projectsInfo[projectCount].titleh3
+    p.innerHTML = projectsInfo[projectCount].descriptp
+})
+
+nextProject.addEventListener('click', () => {
+    const h2 = document.querySelector('#projectH2')
+    const h3 = document.querySelector('#projectH3')
+    const p = document.querySelector('#projectP')
+    projectCount++
+    if(projectCount >= projectsInfo.length){
+        projectCount = 0
+    }
+    h2.innerHTML = projectsInfo[projectCount].titleh2
+    h3.innerHTML = projectsInfo[projectCount].titleh3
+    p.innerHTML = projectsInfo[projectCount].descriptp
+})

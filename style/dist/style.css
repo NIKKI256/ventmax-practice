@@ -817,7 +817,12 @@ main .projects {
 }
 main .projects section {
   width: 70%;
-  margin: 25px auto;
+  margin: 25px auto 0;
+}
+@media (max-width: 1354px) {
+  main .projects section {
+    width: 100%;
+  }
 }
 main .projects section .section-content {
   text-align: center;
@@ -828,15 +833,40 @@ main .projects section .section-content h2 {
   font-family: FuturaDemicRegular;
   font-size: 60px;
 }
+@media (max-width: 1354px) {
+  main .projects section .section-content h2 {
+    font-size: 30px;
+  }
+}
 main .projects section .section-content h3 {
   color: #fff;
   font-family: ProximaNovaRegular;
   font-size: 24px;
 }
+main .projects section .section-content .a-descr {
+  text-align: right;
+  padding: 30px 0 50px 0;
+}
+main .projects section .section-content .a-descr a {
+  font-family: ProximaNovaRegular;
+  color: #00ffc2;
+}
+@media (max-width: 1354px) {
+  main .projects section .section-content .a-descr {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0 25px 0;
+  }
+}
 main .projects section .section-content .slider-and-arrows {
   margin-top: 25px;
   align-items: center;
   position: relative;
+}
+@media (max-width: 1354px) {
+  main .projects section .section-content .slider-and-arrows {
+    display: none;
+  }
 }
 main .projects section .section-content .slider-and-arrows .larch {
   cursor: pointer;
@@ -909,4 +939,88 @@ main .projects section .section-content .slider-and-arrows .slider-projects .sli
   position: absolute;
   bottom: 10px;
   right: 10%;
+}
+main .projects section .section-content .slider-and-arrows-mob {
+  margin-top: 50px;
+  display: none;
+}
+@media (max-width: 1354px) {
+  main .projects section .section-content .slider-and-arrows-mob {
+    display: block;
+  }
+}
+main .projects section .section-content .slider-and-arrows-mob .slider-item {
+  width: 100%;
+  max-width: 483px;
+  position: relative;
+  margin: auto;
+}
+main .projects section .section-content .slider-and-arrows-mob .slider-item .slider-item__description {
+  text-align: left;
+  position: absolute;
+  top: 25px;
+}
+main .projects section .section-content .slider-and-arrows-mob .slider-item .slider-item__description .slider-item__nav {
+  display: flex;
+  justify-content: space-between;
+}
+main .projects section .section-content .slider-and-arrows-mob .slider-item .slider-item__description .slider-item__nav h2,
+main .projects section .section-content .slider-and-arrows-mob .slider-item .slider-item__description .slider-item__nav h3 {
+  width: 280px;
+  text-align: left;
+}
+main .projects section .section-content .slider-and-arrows-mob .slider-item .slider-item__description .slider-item__nav img {
+  cursor: pointer;
+  width: 20px;
+  height: auto;
+}
+main .projects section .section-content .slider-and-arrows-mob .slider-item .slider-item__description hr {
+  margin-right: 100px;
+}
+main .projects section .section-content .slider-and-arrows-mob .slider-item .slider-item__description p {
+  line-height: 20px;
+  font-family: ProximaNovaCond;
+  font-size: 18px;
+  color: #fff;
+  padding: 10px 100px;
+}
+main .projects section .section-content .slider-and-arrows-mob .slider-item button {
+  font-family: ProximaNovaRegular;
+  cursor: pointer;
+  color: #fff;
+  border: solid 1px #fff;
+  background: rgba(0,212,191,0.8);
+  position: absolute;
+  bottom: 0;
+  width: 60%;
+  left: 20%;
+  height: 60px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+main .projects section .section-content .slider-and-arrows-mob .slider-item img {
+  margin: auto;
+  height: 437px;
+  width: 100%;
+}
+main .brands section {
+  width: 70%;
+  margin: 25px auto 0;
+  text-align: center;
+}
+@media (max-width: 1354px) {
+  main .brands section {
+    width: 100%;
+  }
+}
+main .brands section h2 {
+  font-family: FuturaBookRegular;
+  color: #0088ce;
+}
+main .brands section h3 {
+  font-family: ProximaNovaRegular;
+  color: #555;
+}
+main .brands section .brands-images {
+  display: flex;
 }

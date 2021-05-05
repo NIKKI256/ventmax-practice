@@ -858,7 +858,10 @@ main{
         background-color: #1A6EA9
         section{
             width 70%
-            margin 25px auto
+            margin 25px auto 0
+            @media (max-width 1354px){
+                width 100%
+            }
             .section-content{
                 text-align: center;
                 padding-top: 50px
@@ -866,16 +869,35 @@ main{
                     color: white
                     font-family: FuturaDemicRegular
                     font-size: 60px
+                    @media (max-width 1354px){
+                        font-size: 30px
+                    }
                 }
                 h3{
                     color: white
                     font-family: ProximaNovaRegular
                     font-size: 24px
                 }
+                .a-descr{
+                    text-align: right 
+                    padding 30px 0 50px 0
+                    a{
+                        font-family ProximaNovaRegular
+                        color: #00FFC2
+                    }
+                    @media (max-width 1354px){
+                        width 100%
+                        text-align: center
+                        padding 25px 0 25px 0
+                    }
+                }
                 .slider-and-arrows{
                     margin-top 25px
                     align-items: center
                     position: relative
+                    @media (max-width 1354px){
+                        display: none
+                    }
                     .larch{
                         cursor pointer
                         position: absolute
@@ -950,6 +972,88 @@ main{
                         } 
                     }
                 }
+                .slider-and-arrows-mob{
+                    margin-top 50px
+                    display: none
+                    @media (max-width 1354px){
+                        display: block
+                    }
+                    .slider-item{
+                        width 100%
+                        max-width: 483px
+                        position relative
+                        margin: auto
+                        .slider-item__description{
+                            text-align: left
+                            position: absolute
+                            top 25px
+                            .slider-item__nav{
+                                display flex
+                                justify-content: space-between
+                                h2,h3{
+                                    width 280px
+                                    text-align: left
+                                }
+                                img{
+                                    cursor pointer
+                                    width 20px
+                                    height auto
+                                }
+                            }
+                            hr{
+                                margin-right 100px
+                            }
+                            p{  
+                                line-height: 20px
+                                font-family: ProximaNovaCond
+                                font-size: 18px
+                                color: white
+                                padding 10px 100px
+                            }
+                        }
+                        button{
+                            font-family: ProximaNovaRegular
+                            cursor pointer
+                            color: white
+                            border solid 1px white
+                            background: rgba(0,212,191,0.8)
+                            position: absolute
+                            bottom: 0
+                            width 60%
+                            left 20%
+                            height 60px
+                            margin-top 20px
+                            margin-bottom 20px
+                        }
+                        img{
+                            margin auto
+                            height 437px
+                            width 100%
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .brands{
+        section{
+            width 70%
+            margin 25px auto 0
+            text-align: center
+            @media (max-width 1354px){
+                width 100%
+            }
+            h2{
+                font-family FuturaBookRegular
+                color: #0088CE
+            }
+            h3{
+                font-family ProximaNovaRegular
+                color: #555555
+            }
+            .brands-images{
+                display flex
             }
         }
     }
