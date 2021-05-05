@@ -1,7 +1,8 @@
 @import url('../min.css');
-@import url('../fonts.css')
+@import url('../fonts.css');
 
-$linkColor = #00D4BF
+$linkColor = #00D4BF;
+
 
 header{
     background-color: white
@@ -152,7 +153,7 @@ header{
                     transition-duration: .25s;
 
                     &:hover {
-                        background-color: #00D4BF;
+                        background-color: $linkColor;
                     }
                 }
 
@@ -186,8 +187,8 @@ main{
         background-image: url('../img/mainBacImg.png')
     
         section{
-            width 70%
-            margin auto
+            width: 70%;
+            margin: auto;
             .section-content{
                 h1{
                     font-size: 96px
@@ -216,7 +217,7 @@ main{
                 }
                 .section-content__li::before {
                     content: "•"; 
-                    color: #00D4BF; 
+                    color: $linkColor; 
                     margin-right: 10px;
                 }
                 .section-content__button{
@@ -225,6 +226,7 @@ main{
                     display flex
                     flex-direction: column
                     button{
+                        z-index 11
                         cursor pointer
                         font-size: 18px
                         font-family: 'FuturaDemicRegular'
@@ -238,6 +240,7 @@ main{
                         }
                     }
                     span{
+                        z-index 11
                         margin-top 50px
                         color white
                         text-align: center
@@ -249,10 +252,11 @@ main{
     }
 
     .back-img-gradient{
-        margin-top -110px
+        top -130px
+        position relative
         background-image: url('../img/BacGradient.png')
+        background-size: cover
         padding-top: 250px;
-
         section{
             width 70%
             margin auto
@@ -361,8 +365,9 @@ main{
     }
 
     .back-img-white{
-        background-color: white
-    
+        background white
+        top -60px
+        position: relative
         section{
             width 70%
             margin auto
@@ -374,8 +379,9 @@ main{
             }
 
             .section-content{
-                padding-top:100px 
-                padding-bottom: 50px
+                display: flex
+                flex-direction column
+                align-items: center
                 h2{
                     color: #0088CE
                     font-size: 60px
@@ -547,8 +553,8 @@ main{
                 }
 
                 .tabs-buttons__item-choose{
-                    color:#00D4BF
-                    border-bottom: solid 2px #00D4BF
+                    color:$linkColor
+                    border-bottom: solid 2px $linkColor
                 }
             }
 
@@ -730,7 +736,7 @@ main{
                     margin-top 50px
                     font-family: ProximaNovaRegular
                     font-size: 25px
-                    color: #00D4BF
+                    color:$linkColor
                 }
                 .tabs-adapt__teams{
                     .tabs-adapt__teams-slider{
@@ -1090,67 +1096,291 @@ main{
             }
         }
     }
+
+    .ventilations{
+        margin-top 100px
+        section{
+            width 100%
+            .section-content{
+                width 70%
+                margin auto    
+                border: solid 1px black
+                text-align: center
+                h2{
+                    color: #0088CE
+                    font-family FuturaBookRegular
+                    font-size: 60px
+                }
+                h3{
+                    color: #555555
+                    font-family ProximaNovaRegular
+                    font-size: 24px
+                }
+                .grid-net{
+                    display grid
+                    .grid-top-row{
+                        margin-top 20px
+                        display grid
+                        grid-template-columns: 1fr 1fr 2fr
+                        min-height: 400px
+                        grid-gap: 20px
+                        .grid-item{
+                            position relative
+                            &:hover{
+                                button{
+                                    transition: 0.5s
+                                    background rgba(0,212,191,0.5)
+                                }
+                            }
+                            img{
+                                height 100%
+                                width 100%
+                            }
+                            .grid-item__description{
+                                text-align: left
+                                position: absolute
+                                top 10px
+                                word-wrap: break-word
+                                h2{
+                                    padding-left 10px
+                                    width 80%
+                                    max-width: 300px
+                                    color white
+                                    font-family: ProximaNovaCond
+                                    font-size: 30px
+                                }
+                                p{
+                                    padding-left 10px
+                                    color white
+                                    font-family: ProximaNovaCond
+                                    font-size: 16px
+                                }
+                                img{
+                                    position: absolute
+                                    top 10px
+                                    right 10px
+                                    width 50px
+                                    height auto
+                                }
+                            }
+                            button{
+                                color: white
+                                border: solid 1px white
+                                width 80%
+                                padding 15px
+                                position: absolute
+                                bottom: 10px
+                                left 10%
+                                background transparent
+                                font-family ProximaNovaRegular
+                                font-size: 12px
+                            }
+                            border solid 1px black
+                        }
+                    }
+                    .grid-bot-row{
+                        margin-top 20px
+                        display grid
+                        grid-template-columns: 1fr 2fr 1fr
+                        grid-gap: 20px
+                    }
+                    .grid-item{
+                        border solid 1px black
+                    }
+                }
+            }
+        }
+    }
     
-    // .ventilation{
-    //     section{
-    //         width 100%
-    //         margin 200px auto 0
-    //         text-align: center
-    //         @media (max-width 1354px){
-    //             width 100%
-    //         }
-    //         .section-content{
-    //             width 70%
-    //             margin: auto
-    //             h2{
-    //                 color: #0088CE
-    //                 font-family: FuturaBookRegular
-    //                 font-size:60px
-    //             }
-    //             h3{
-    //                 font-family ProximaNovaRegular
-    //                 font-size:24px
-    //                 color #555555
-    //             }
-    //             .grid-net{
-    //                 margin-top 50px
-    //                 border solid 1px black
-    //                 display grid 
-    //                 .grid-net__container-1{
-    //                     border solid 1px red
-    //                     display grid
-    //                     grid-template-columns: 1fr 1fr 2fr
-    //                     grid-auto-rows: minmax(371px, auto);
-    //                     grid-column-gap: 20px 
-    //                     .grid-net__container-item{
-    //                         border solid 1px blue
-    //                         position relative
-    //                         .grid-item__description{
-    //                             padding 15px 0 0 10px 
-    //                             text-align: left
-    //                             position: absolute
-    //                             top 0
-    //                             width 80%
-    //                             h2{
-    //                                 color: white
-    //                                 font-family: ProximaNovaCond
-    //                                 font-size: 30px
-    //                             }
-    //                         }
-    //                     }
-    //                 }  
-    //                 .grid-net__container-2{
-    //                     margin-top 20px
-    //                     border solid 1px red
-    //                     display grid
-    //                     grid-template-columns: 1fr 2fr 1fr
-    //                     grid-column-gap: 20px 
-    //                     .grid-net__container-item{
-    //                         border solid 1px blue
-    //                     }
-    //                 }  
-    //             }
-    //         }
-    //     }
-    // }
+    .map{
+        section{
+            width 100%
+            margin 200px auto 0
+            text-align: center
+            @media (max-width 1354px){
+                width 100%
+            }
+            .section-content{
+                width 70%
+                margin: auto
+                @media (max-width 1354px){
+                    width 100%
+                }
+                h2{
+                    color: #0088CE
+                    font-family: FuturaBookRegular
+                    font-size: 60px
+                }
+                .map-content{
+                    margin-top 50px
+                    display flex
+                    justify-content: space-between
+                    @media (max-width 1354px){
+                        width 100%
+                        flex-direction: column
+                    }
+                    button{
+                        display none
+                        cursor pointer
+                        color white
+                        border: none
+                        padding 20px
+                        width 70%
+                        margin 25px auto 0
+                        background:$linkColor
+                        font-size: 18px
+                        font-family: FuturaDemicRegular
+                        @media (max-width 1354px){
+                            display block
+                        }
+                    }
+                    .info-map{
+                        width 50%
+                        @media (max-width 1354px){
+                            width 100%
+                        }
+                        .info-map__block{
+                            width 60%
+                            margin: 25px auto 0
+                            display flex
+                            justify-content: space-around
+                            align-items: center
+                            @media (max-width 1354px){
+                                width 65%
+                            }
+                            img{
+                                width auto
+                                height 35px
+                            }
+                            span{
+                                width 65%
+                                text-align: left
+                                color: #555555;
+                                font-family: ProximaNovaRegular
+                                font-size: 16px
+                            }
+                        }
+                        button{
+                            display block
+                            cursor pointer
+                            color white
+                            border: none
+                            padding 20px
+                            width 70%
+                            margin-top 50px
+                            background:$linkColor
+                            font-size: 18px
+                            font-family: FuturaDemicRegular
+                            @media (max-width 1354px){
+                                display none
+                            }
+                        }
+                    }
+                    .display-map{
+                        width 50%
+                        @media (max-width 1354px){
+                            margin-top 40px
+                            width 100%
+                            iframe{
+                                height 240px
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer{
+    background:#006FB9
+    margin-top 80px
+    section{
+        width 100%
+        .section-content{
+            width 70%
+            margin: auto
+            padding-bottom: 50px
+            @media (max-width 1354px){
+                width 100%
+            }
+            .footer-links{
+                padding-top 50px
+                display flex
+                justify-content: space-between
+                @media (max-width 1354px){
+                    display none
+                }
+                .footer-links__item{
+                    width 20%
+                    font-family: ProximaNovaRegular
+                    .footer-links__item-title{
+                        a{
+                            color: white
+                        }
+                        &:hover{
+                            a{
+                                transition: 0.5s
+                                color: #36F5D6
+                            }
+                            hr{
+                                transition: 0.5s
+                                border solid 1px #36F5D6
+                            } 
+                        }
+                    }
+                    .footer-links__item-list{
+                        margin-top 20px
+                        display flex
+                        flex-direction: column
+                        a{
+                            color: white
+                            margin-top 10px
+                        }
+                    }
+                }
+            }
+            .hr-footer{
+                margin 50px auto
+                @media (max-width 1354px){
+                    display none
+                }
+            }
+            .footer-marks{
+                text-align: center
+                @media (max-width 1354px){
+                    padding-top 50px
+                    padding-bottom 50px
+                    width 100%
+                }
+                h2{
+                    font-size: 24px
+                    font-family: ProximaNovaRegular
+                    color: white
+                }
+                .footer-marks__images{
+                    display flex
+                    justify-content: space-between;
+                    margin-top 50px
+                    @media (max-width 1354px){
+                        flex-wrap: wrap
+                        margin-top 0
+                    }
+                    .footer-marks__images-item{
+                        @media (max-width 1354px){
+                            display flex
+                            justify-content: center
+                            align-items: center
+                            width 50%
+                            margin-top 70px
+                            img{
+                                width 170px
+                                height auto
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

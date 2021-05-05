@@ -209,6 +209,7 @@ main .back-img-house section .section-content .section-content__button {
   flex-direction: column;
 }
 main .back-img-house section .section-content .section-content__button button {
+  z-index: 11;
   cursor: pointer;
   font-size: 18px;
   font-family: 'FuturaDemicRegular';
@@ -222,14 +223,17 @@ main .back-img-house section .section-content .section-content__button button:ho
   background-color: #00d4bf;
 }
 main .back-img-house section .section-content .section-content__button span {
+  z-index: 11;
   margin-top: 50px;
   color: #fff;
   text-align: center;
   font-family: ProximaNovaRegular;
 }
 main .back-img-gradient {
-  margin-top: -110px;
+  top: -130px;
+  position: relative;
   background-image: url("../img/BacGradient.png");
+  background-size: cover;
   padding-top: 250px;
 }
 main .back-img-gradient section {
@@ -342,7 +346,9 @@ main .back-img-gradient section .section-content .section-content__icons .sectio
   font-family: FuturaDemicRegular;
 }
 main .back-img-white {
-  background-color: #fff;
+  background: #fff;
+  top: -60px;
+  position: relative;
 }
 main .back-img-white section {
   width: 70%;
@@ -356,8 +362,9 @@ main .back-img-white section {
   }
 }
 main .back-img-white section .section-content {
-  padding-top: 100px;
-  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 main .back-img-white section .section-content h2 {
   color: #0088ce;
@@ -1062,4 +1069,306 @@ main .brands section .brands-images-slider {
 main .brands section .brands-images-slider .arrow {
   cursor: pointer;
   height: 40px;
+}
+main .ventilations {
+  margin-top: 100px;
+}
+main .ventilations section {
+  width: 100%;
+}
+main .ventilations section .section-content {
+  width: 70%;
+  margin: auto;
+  border: solid 1px #000;
+  text-align: center;
+}
+main .ventilations section .section-content h2 {
+  color: #0088ce;
+  font-family: FuturaBookRegular;
+  font-size: 60px;
+}
+main .ventilations section .section-content h3 {
+  color: #555;
+  font-family: ProximaNovaRegular;
+  font-size: 24px;
+}
+main .ventilations section .section-content .grid-net {
+  display: grid;
+}
+main .ventilations section .section-content .grid-net .grid-top-row {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  min-height: 400px;
+  grid-gap: 20px;
+}
+main .ventilations section .section-content .grid-net .grid-top-row .grid-item {
+  position: relative;
+  border: solid 1px #000;
+}
+main .ventilations section .section-content .grid-net .grid-top-row .grid-item:hover button {
+  transition: 0.5s;
+  background: rgba(0,212,191,0.5);
+}
+main .ventilations section .section-content .grid-net .grid-top-row .grid-item img {
+  height: 100%;
+  width: 100%;
+}
+main .ventilations section .section-content .grid-net .grid-top-row .grid-item .grid-item__description {
+  text-align: left;
+  position: absolute;
+  top: 10px;
+  word-wrap: break-word;
+}
+main .ventilations section .section-content .grid-net .grid-top-row .grid-item .grid-item__description h2 {
+  padding-left: 10px;
+  width: 80%;
+  max-width: 300px;
+  color: #fff;
+  font-family: ProximaNovaCond;
+  font-size: 30px;
+}
+main .ventilations section .section-content .grid-net .grid-top-row .grid-item .grid-item__description p {
+  padding-left: 10px;
+  color: #fff;
+  font-family: ProximaNovaCond;
+  font-size: 16px;
+}
+main .ventilations section .section-content .grid-net .grid-top-row .grid-item .grid-item__description img {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 50px;
+  height: auto;
+}
+main .ventilations section .section-content .grid-net .grid-top-row .grid-item button {
+  color: #fff;
+  border: solid 1px #fff;
+  width: 80%;
+  padding: 15px;
+  position: absolute;
+  bottom: 10px;
+  left: 10%;
+  background: transparent;
+  font-family: ProximaNovaRegular;
+  font-size: 12px;
+}
+main .ventilations section .section-content .grid-net .grid-bot-row {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-gap: 20px;
+}
+main .ventilations section .section-content .grid-net .grid-item {
+  border: solid 1px #000;
+}
+main .map section {
+  width: 100%;
+  margin: 200px auto 0;
+  text-align: center;
+}
+@media (max-width: 1354px) {
+  main .map section {
+    width: 100%;
+  }
+}
+main .map section .section-content {
+  width: 70%;
+  margin: auto;
+}
+@media (max-width: 1354px) {
+  main .map section .section-content {
+    width: 100%;
+  }
+}
+main .map section .section-content h2 {
+  color: #0088ce;
+  font-family: FuturaBookRegular;
+  font-size: 60px;
+}
+main .map section .section-content .map-content {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 1354px) {
+  main .map section .section-content .map-content {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+main .map section .section-content .map-content button {
+  display: none;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  padding: 20px;
+  width: 70%;
+  margin: 25px auto 0;
+  background: #00d4bf;
+  font-size: 18px;
+  font-family: FuturaDemicRegular;
+}
+@media (max-width: 1354px) {
+  main .map section .section-content .map-content button {
+    display: block;
+  }
+}
+main .map section .section-content .map-content .info-map {
+  width: 50%;
+}
+@media (max-width: 1354px) {
+  main .map section .section-content .map-content .info-map {
+    width: 100%;
+  }
+}
+main .map section .section-content .map-content .info-map .info-map__block {
+  width: 60%;
+  margin: 25px auto 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+@media (max-width: 1354px) {
+  main .map section .section-content .map-content .info-map .info-map__block {
+    width: 65%;
+  }
+}
+main .map section .section-content .map-content .info-map .info-map__block img {
+  width: auto;
+  height: 35px;
+}
+main .map section .section-content .map-content .info-map .info-map__block span {
+  width: 65%;
+  text-align: left;
+  color: #555;
+  font-family: ProximaNovaRegular;
+  font-size: 16px;
+}
+main .map section .section-content .map-content .info-map button {
+  display: block;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  padding: 20px;
+  width: 70%;
+  margin-top: 50px;
+  background: #00d4bf;
+  font-size: 18px;
+  font-family: FuturaDemicRegular;
+}
+@media (max-width: 1354px) {
+  main .map section .section-content .map-content .info-map button {
+    display: none;
+  }
+}
+main .map section .section-content .map-content .display-map {
+  width: 50%;
+}
+@media (max-width: 1354px) {
+  main .map section .section-content .map-content .display-map {
+    margin-top: 40px;
+    width: 100%;
+  }
+  main .map section .section-content .map-content .display-map iframe {
+    height: 240px;
+  }
+}
+footer {
+  background: #006fb9;
+  margin-top: 80px;
+}
+footer section {
+  width: 100%;
+}
+footer section .section-content {
+  width: 70%;
+  margin: auto;
+  padding-bottom: 50px;
+}
+@media (max-width: 1354px) {
+  footer section .section-content {
+    width: 100%;
+  }
+}
+footer section .section-content .footer-links {
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 1354px) {
+  footer section .section-content .footer-links {
+    display: none;
+  }
+}
+footer section .section-content .footer-links .footer-links__item {
+  width: 20%;
+  font-family: ProximaNovaRegular;
+}
+footer section .section-content .footer-links .footer-links__item .footer-links__item-title a {
+  color: #fff;
+}
+footer section .section-content .footer-links .footer-links__item .footer-links__item-title:hover a {
+  transition: 0.5s;
+  color: #36f5d6;
+}
+footer section .section-content .footer-links .footer-links__item .footer-links__item-title:hover hr {
+  transition: 0.5s;
+  border: solid 1px #36f5d6;
+}
+footer section .section-content .footer-links .footer-links__item .footer-links__item-list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+footer section .section-content .footer-links .footer-links__item .footer-links__item-list a {
+  color: #fff;
+  margin-top: 10px;
+}
+footer section .section-content .hr-footer {
+  margin: 50px auto;
+}
+@media (max-width: 1354px) {
+  footer section .section-content .hr-footer {
+    display: none;
+  }
+}
+footer section .section-content .footer-marks {
+  text-align: center;
+}
+@media (max-width: 1354px) {
+  footer section .section-content .footer-marks {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 100%;
+  }
+}
+footer section .section-content .footer-marks h2 {
+  font-size: 24px;
+  font-family: ProximaNovaRegular;
+  color: #fff;
+}
+footer section .section-content .footer-marks .footer-marks__images {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+@media (max-width: 1354px) {
+  footer section .section-content .footer-marks .footer-marks__images {
+    flex-wrap: wrap;
+    margin-top: 0;
+  }
+}
+@media (max-width: 1354px) {
+  footer section .section-content .footer-marks .footer-marks__images .footer-marks__images-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin-top: 70px;
+  }
+  footer section .section-content .footer-marks .footer-marks__images .footer-marks__images-item img {
+    width: 170px;
+    height: auto;
+  }
 }
