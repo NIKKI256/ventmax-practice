@@ -370,6 +370,7 @@ main{
 
             @media (max-width 1000px){
                 width 100%
+                padding 5px
             }
 
             .section-content{
@@ -523,7 +524,9 @@ main{
             width 70%
             margin: 100px auto 0
             text-align: center
-
+            @media (max-width 1354px){
+                display: none
+            }
             h2{
                 font-size: 40px
                 font-family: FuturaBookRegular
@@ -553,10 +556,7 @@ main{
                 margin-top 100px
                 display flex
                 justify-content: space-between
-
-                border solid 1px blac
                 .tabs-info__avatar{
-                    width 30%
                     img{
                         width 332px
                         height auto
@@ -699,6 +699,257 @@ main{
 
             .tabs-hidden{
                 display: none    
+            }
+        }
+        .section-content-adapt{
+            display: none
+            width 100%
+            margin: 50px auto 0;
+            padding 15px
+            color: #555555
+            @media (max-width 1354px){
+                display: block
+            }
+            h2{
+                text-align: center
+                font-size: 40px
+                font-family: FuturaBookRegular
+                color: #0088CE
+            }
+            h3{
+                
+                font-size: 30px
+                font-family: ProximaNovaRegular
+                margin-top 40px
+            }
+            p{
+                margin-top 10px
+            }
+            .tabs-adapt{
+                h2{
+                    margin-top 50px
+                    font-family: ProximaNovaRegular
+                    font-size: 25px
+                    color: #00D4BF
+                }
+                .tabs-adapt__teams{
+                    .tabs-adapt__teams-slider{
+                        margin-top 50px
+                        display flex
+                        justify-content: space-between
+                        align-items: center
+                        .arrows{
+                            cursor: pointer
+                            height 25px
+                            width auto
+                        }
+                        .sliderImg{
+                            height 332px
+                            width auto
+                        }
+                    }
+                    .info-person{
+                        font-family: ProximaNovaRegular
+                        text-align: center
+                    }
+                    .tabs-adapt__teams-hr{
+                        border: solid 2px #C4C4C4
+                    }
+                }
+                .tabs-adapt__companies{
+                    h3{
+                        text-align: center
+                    }
+                    .tabs-adapt__companies-slider{
+                        margin-top 50px
+                        display flex
+                        justify-content: space-between
+                        align-items: center
+                        .arrows{
+                            cursor: pointer
+                            height 25px
+                            width auto
+                        }
+                        .sliderImg{
+                            height 332px
+                            width auto
+                        }
+                        .companies-slider__item{
+                            position relative
+                            p{
+                                width 100%
+                                font-size: 18px
+                                text-align: center
+                                font-family: ProximaNovaRegular
+                                color: white
+                                position: absolute
+                                top: 8%
+                            }
+                        }
+                    }
+                    .info-us{
+                        font-family: ProximaNovaRegular
+                        text-align: center
+                    }
+                    .tabs-adapt__companies-hr{
+                        border: solid 2px #C4C4C4
+                    }
+                }
+                .tabs-adapt__showroom{
+                    h3{
+                        text-align: center
+                    }
+                    .tabs-adapt__showroom-slider{
+                        margin-top 50px
+                        display flex
+                        justify-content: space-between
+                        align-items: center
+                        .arrows{
+                            cursor: pointer
+                            height 25px
+                            width auto
+                        }
+                        .sliderImg{
+                            height 332px
+                            width auto
+                        }
+                    }
+                    .info-us{
+                        font-family: ProximaNovaRegular
+                        text-align: center
+                    }
+                    .tabs-adapt__showroom-hr{
+                        border: solid 2px #C4C4C4
+                    }
+                }
+                .tabs-adapt__sertif{
+                    .tabs-adapt__sertif-slider{
+                        margin-top 25px
+                        display flex
+                        justify-content: center
+                        align-items: center
+                        .arrows{
+                            cursor: pointer
+                            height 25px
+                            width auto
+                            &:first-child{
+                                margin-right 15px
+                            }
+                            &:last-child{
+                                margin-left 15px
+                            }
+                        }
+                        .sliderImg{
+                            height 332px
+                            width auto
+                        }
+                    }
+                    .info-us{
+                        margin-top 15px
+                        font-family: ProximaNovaRegular
+                        text-align: center
+                    }
+                }
+            }
+        }
+    }
+
+    .projects{
+        background-color: #1A6EA9
+        section{
+            width 70%
+            margin 25px auto
+            .section-content{
+                text-align: center;
+                padding-top: 50px
+                h2{
+                    color: white
+                    font-family: FuturaDemicRegular
+                    font-size: 60px
+                }
+                h3{
+                    color: white
+                    font-family: ProximaNovaRegular
+                    font-size: 24px
+                }
+                .slider-and-arrows{
+                    margin-top 25px
+                    align-items: center
+                    position: relative
+                    .larch{
+                        cursor pointer
+                        position: absolute
+                        top 40%
+                        left: -70px
+                        width 32px
+                        height 52px
+                    }    
+                    .rarch{
+                        cursor pointer
+                        position: absolute
+                        top 40%
+                        right: -70px
+                        width 32px
+                        height 52px
+                    }
+                    .slider-projects{
+                        display flex
+                        justify-content: space-between
+                        .slider-projects__item{
+                            position: relative
+                            &:hover{
+                                .slider-projects__item-description{
+                                    h2, h3{
+                                        transition: 0.5s
+                                        color: $linkColor
+                                    } 
+                                }
+                                .projects-btn{
+                                    transition: 0.5s
+                                    background: rgba(0,212,191,0.5)
+                                }
+                            }
+                            .slider-projects__item-description{
+                                padding-top 15px
+                                text-align: left
+                                position absolute
+                                top 0
+                                h2, h3, p{
+                                    padding-left 10px
+                                }
+                                h2{
+                                    font-family: ProximaNovaRegular
+                                    font-size: 24px
+                                }
+                                h3{
+                                    font-family: ProximaNovaRegular
+                                    font-size: 18px
+                                }
+                                hr{
+                                    margin: 20px 20px 20px 0px
+                                }
+                                p{
+                                    color: white
+                                    font-family: ProximaNovaCond
+                                    font-size: 16px
+                                }
+                            }
+                            .projects-btn{
+                                cursor pointer
+                                background:none
+                                color: white
+                                border solid 1px white
+                                font-family: ProximaNovaRegular
+                                font-size: 14px
+                                width 80%
+                                padding 15px
+                                position absolute
+                                bottom: 10px
+                                right 10%
+                            }
+                        } 
+                    }
+                }
             }
         }
     }

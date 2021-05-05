@@ -352,6 +352,7 @@ main .back-img-white section {
 @media (max-width: 1000px) {
   main .back-img-white section {
     width: 100%;
+    padding: 5px;
   }
 }
 main .back-img-white section .section-content {
@@ -498,6 +499,11 @@ main .tabs-slider .section-content {
   margin: 100px auto 0;
   text-align: center;
 }
+@media (max-width: 1354px) {
+  main .tabs-slider .section-content {
+    display: none;
+  }
+}
 main .tabs-slider .section-content h2 {
   font-size: 40px;
   font-family: FuturaBookRegular;
@@ -524,10 +530,6 @@ main .tabs-slider .section-content .tabs-info__team {
   margin-top: 100px;
   display: flex;
   justify-content: space-between;
-  border: solid 1px blac;
-}
-main .tabs-slider .section-content .tabs-info__team .tabs-info__avatar {
-  width: 30%;
 }
 main .tabs-slider .section-content .tabs-info__team .tabs-info__avatar img {
   width: 332px;
@@ -667,4 +669,244 @@ main .tabs-slider .section-content .tabs-info__sertidication .sertification-imag
 }
 main .tabs-slider .section-content .tabs-hidden {
   display: none;
+}
+main .tabs-slider .section-content-adapt {
+  display: none;
+  width: 100%;
+  margin: 50px auto 0;
+  padding: 15px;
+  color: #555;
+}
+@media (max-width: 1354px) {
+  main .tabs-slider .section-content-adapt {
+    display: block;
+  }
+}
+main .tabs-slider .section-content-adapt h2 {
+  text-align: center;
+  font-size: 40px;
+  font-family: FuturaBookRegular;
+  color: #0088ce;
+}
+main .tabs-slider .section-content-adapt h3 {
+  font-size: 30px;
+  font-family: ProximaNovaRegular;
+  margin-top: 40px;
+}
+main .tabs-slider .section-content-adapt p {
+  margin-top: 10px;
+}
+main .tabs-slider .section-content-adapt .tabs-adapt h2 {
+  margin-top: 50px;
+  font-family: ProximaNovaRegular;
+  font-size: 25px;
+  color: #00d4bf;
+}
+main .tabs-slider .section-content-adapt .tabs-adapt .tabs-adapt__teams .tabs-adapt__teams-slider {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .tabs-slider .section-content-adapt .tabs-adapt .tabs-adapt__teams .tabs-adapt__teams-slider .arrows {
+  cursor: pointer;
+  height: 25px;
+  width: auto;
+}
+main .tabs-slider .section-content-adapt .tabs-adapt .tabs-adapt__teams .tabs-adapt__teams-slider .sliderImg {
+  height: 332px;
+  width: auto;
+}
+main .tabs-slider .section-content-adapt .tabs-adapt .tabs-adapt__teams .info-person {
+  font-family: ProximaNovaRegular;
+  text-align: center;
+}
+main .tabs-slider .section-content-adapt .tabs-adapt .tabs-adapt__teams .tabs-adapt__teams-hr {
+  border: solid 2px #c4c4c4;
+}
+main .tabs-slider .section-content-adapt .tabs-adapt .tabs-adapt__companies h3 {
+  text-align: center;
+}
+main .tabs-slider .section-content-adapt .tabs-adapt .tabs-adapt__companies .tabs-adapt__companies-slider {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .tabs-slider .section-content-adapt .tabs-adapt .tabs-adapt__companies .tabs-adapt__companies-slider .arrows {
+  cursor: pointer;
+  height: 25px;
+  width: auto;
+}
+main .tabs-slider .section-content-adapt .tabs-adapt .tabs-adapt__companies .tabs-adapt__companies-slider .sliderImg {
+  height: 332px;
+  width: auto;
+}
+main .tabs-slider .section-content-adapt .tabs-adapt .tabs-adapt__companies .tabs-adapt__companies-slider .companies-slider__item {
+  position: relative;
+}
+main .tabs-slider .section-content-adapt .tabs-adapt .tabs-adapt__companies .tabs-adapt__companies-slider .companies-slider__item p {
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+  font-family: ProximaNovaRegular;
+  color: #fff;
+  position: absolute;
+  top: 8%;
+}
+main .tabs-slider .section-content-adapt .tabs-adapt .tabs-adapt__companies .info-us {
+  font-family: ProximaNovaRegular;
+  text-align: center;
+}
+main .tabs-slider .section-content-adapt .tabs-adapt .tabs-adapt__companies .tabs-adapt__companies-hr {
+  border: solid 2px #c4c4c4;
+}
+main .tabs-slider .section-content-adapt .tabs-adapt .tabs-adapt__showroom h3 {
+  text-align: center;
+}
+main .tabs-slider .section-content-adapt .tabs-adapt .tabs-adapt__showroom .tabs-adapt__showroom-slider {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .tabs-slider .section-content-adapt .tabs-adapt .tabs-adapt__showroom .tabs-adapt__showroom-slider .arrows {
+  cursor: pointer;
+  height: 25px;
+  width: auto;
+}
+main .tabs-slider .section-content-adapt .tabs-adapt .tabs-adapt__showroom .tabs-adapt__showroom-slider .sliderImg {
+  height: 332px;
+  width: auto;
+}
+main .tabs-slider .section-content-adapt .tabs-adapt .tabs-adapt__showroom .info-us {
+  font-family: ProximaNovaRegular;
+  text-align: center;
+}
+main .tabs-slider .section-content-adapt .tabs-adapt .tabs-adapt__showroom .tabs-adapt__showroom-hr {
+  border: solid 2px #c4c4c4;
+}
+main .tabs-slider .section-content-adapt .tabs-adapt .tabs-adapt__sertif .tabs-adapt__sertif-slider {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .tabs-slider .section-content-adapt .tabs-adapt .tabs-adapt__sertif .tabs-adapt__sertif-slider .arrows {
+  cursor: pointer;
+  height: 25px;
+  width: auto;
+}
+main .tabs-slider .section-content-adapt .tabs-adapt .tabs-adapt__sertif .tabs-adapt__sertif-slider .arrows:first-child {
+  margin-right: 15px;
+}
+main .tabs-slider .section-content-adapt .tabs-adapt .tabs-adapt__sertif .tabs-adapt__sertif-slider .arrows:last-child {
+  margin-left: 15px;
+}
+main .tabs-slider .section-content-adapt .tabs-adapt .tabs-adapt__sertif .tabs-adapt__sertif-slider .sliderImg {
+  height: 332px;
+  width: auto;
+}
+main .tabs-slider .section-content-adapt .tabs-adapt .tabs-adapt__sertif .info-us {
+  margin-top: 15px;
+  font-family: ProximaNovaRegular;
+  text-align: center;
+}
+main .projects {
+  background-color: #1a6ea9;
+}
+main .projects section {
+  width: 70%;
+  margin: 25px auto;
+}
+main .projects section .section-content {
+  text-align: center;
+  padding-top: 50px;
+}
+main .projects section .section-content h2 {
+  color: #fff;
+  font-family: FuturaDemicRegular;
+  font-size: 60px;
+}
+main .projects section .section-content h3 {
+  color: #fff;
+  font-family: ProximaNovaRegular;
+  font-size: 24px;
+}
+main .projects section .section-content .slider-and-arrows {
+  margin-top: 25px;
+  align-items: center;
+  position: relative;
+}
+main .projects section .section-content .slider-and-arrows .larch {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  left: -70px;
+  width: 32px;
+  height: 52px;
+}
+main .projects section .section-content .slider-and-arrows .rarch {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  right: -70px;
+  width: 32px;
+  height: 52px;
+}
+main .projects section .section-content .slider-and-arrows .slider-projects {
+  display: flex;
+  justify-content: space-between;
+}
+main .projects section .section-content .slider-and-arrows .slider-projects .slider-projects__item {
+  position: relative;
+}
+main .projects section .section-content .slider-and-arrows .slider-projects .slider-projects__item:hover .slider-projects__item-description h2,
+main .projects section .section-content .slider-and-arrows .slider-projects .slider-projects__item:hover .slider-projects__item-description h3 {
+  transition: 0.5s;
+  color: #00d4bf;
+}
+main .projects section .section-content .slider-and-arrows .slider-projects .slider-projects__item:hover .projects-btn {
+  transition: 0.5s;
+  background: rgba(0,212,191,0.5);
+}
+main .projects section .section-content .slider-and-arrows .slider-projects .slider-projects__item .slider-projects__item-description {
+  padding-top: 15px;
+  text-align: left;
+  position: absolute;
+  top: 0;
+}
+main .projects section .section-content .slider-and-arrows .slider-projects .slider-projects__item .slider-projects__item-description h2,
+main .projects section .section-content .slider-and-arrows .slider-projects .slider-projects__item .slider-projects__item-description h3,
+main .projects section .section-content .slider-and-arrows .slider-projects .slider-projects__item .slider-projects__item-description p {
+  padding-left: 10px;
+}
+main .projects section .section-content .slider-and-arrows .slider-projects .slider-projects__item .slider-projects__item-description h2 {
+  font-family: ProximaNovaRegular;
+  font-size: 24px;
+}
+main .projects section .section-content .slider-and-arrows .slider-projects .slider-projects__item .slider-projects__item-description h3 {
+  font-family: ProximaNovaRegular;
+  font-size: 18px;
+}
+main .projects section .section-content .slider-and-arrows .slider-projects .slider-projects__item .slider-projects__item-description hr {
+  margin: 20px 20px 20px 0px;
+}
+main .projects section .section-content .slider-and-arrows .slider-projects .slider-projects__item .slider-projects__item-description p {
+  color: #fff;
+  font-family: ProximaNovaCond;
+  font-size: 16px;
+}
+main .projects section .section-content .slider-and-arrows .slider-projects .slider-projects__item .projects-btn {
+  cursor: pointer;
+  background: none;
+  color: #fff;
+  border: solid 1px #fff;
+  font-family: ProximaNovaRegular;
+  font-size: 14px;
+  width: 80%;
+  padding: 15px;
+  position: absolute;
+  bottom: 10px;
+  right: 10%;
 }

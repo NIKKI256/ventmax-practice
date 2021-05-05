@@ -17,6 +17,11 @@
 }
 
 @font-face {
+    font-family: 'ProximaNovaCond';
+    src: url('./fonts/ProximaNovaCondRegular.ttf')  format('truetype');
+}
+
+@font-face {
     font-family: 'FuturaDemicRegular';
     src: url('./fonts/FuturademiCRegular.ttf')  format('truetype');
     font-weight: 600;
