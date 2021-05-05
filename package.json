@@ -1,7 +1,6 @@
 {
   "name": "ventmax-practice",
   "version": "1.0.0",
-  "description": "",
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,5 +14,10 @@
   "bugs": {
     "url": "https://github.com/NIKKI256/ventmax-practice/issues"
   },
-  "homepage": "https://github.com/NIKKI256/ventmax-practice#readme"
+  "homepage": "https://github.com/NIKKI256/ventmax-practice#readme",
+  "keywords": [],
+  "description": "",
+  "dependencies": {
+    "nodemon": "^2.0.7"
+  }
 }

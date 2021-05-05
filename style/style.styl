@@ -1090,67 +1090,105 @@ main{
             }
         }
     }
-    
-    // .ventilation{
-    //     section{
-    //         width 100%
-    //         margin 200px auto 0
-    //         text-align: center
-    //         @media (max-width 1354px){
-    //             width 100%
-    //         }
-    //         .section-content{
-    //             width 70%
-    //             margin: auto
-    //             h2{
-    //                 color: #0088CE
-    //                 font-family: FuturaBookRegular
-    //                 font-size:60px
-    //             }
-    //             h3{
-    //                 font-family ProximaNovaRegular
-    //                 font-size:24px
-    //                 color #555555
-    //             }
-    //             .grid-net{
-    //                 margin-top 50px
-    //                 border solid 1px black
-    //                 display grid 
-    //                 .grid-net__container-1{
-    //                     border solid 1px red
-    //                     display grid
-    //                     grid-template-columns: 1fr 1fr 2fr
-    //                     grid-auto-rows: minmax(371px, auto);
-    //                     grid-column-gap: 20px 
-    //                     .grid-net__container-item{
-    //                         border solid 1px blue
-    //                         position relative
-    //                         .grid-item__description{
-    //                             padding 15px 0 0 10px 
-    //                             text-align: left
-    //                             position: absolute
-    //                             top 0
-    //                             width 80%
-    //                             h2{
-    //                                 color: white
-    //                                 font-family: ProximaNovaCond
-    //                                 font-size: 30px
-    //                             }
-    //                         }
-    //                     }
-    //                 }  
-    //                 .grid-net__container-2{
-    //                     margin-top 20px
-    //                     border solid 1px red
-    //                     display grid
-    //                     grid-template-columns: 1fr 2fr 1fr
-    //                     grid-column-gap: 20px 
-    //                     .grid-net__container-item{
-    //                         border solid 1px blue
-    //                     }
-    //                 }  
-    //             }
-    //         }
-    //     }
-    // }
+    //=========================================================================================================================
+
+    .ventilation {
+        margin 200px 0px
+
+        .container {
+            max-width 1112px
+            margin 0px auto
+        }
+
+        .ventilation__box{
+            // border 1px solid
+            p.ventilation__title {
+                font-size: 60px
+                font-family ProximaNovaRegular
+                color: #0088CE
+                text-align center
+            }
+            p.ventilation__subtitle {
+                font-family ProximaNovaRegular
+                color: #555555
+                font-size: 20px
+                margin-bottom 30px
+                text-align center
+            }
+
+            .content {
+                display flex
+                justify-content space-between
+                flex-wrap wrap
+
+                .content__card {
+                    background-size contain
+
+                    // border 1px solid #000
+                    margin-top 28px
+
+                    position relative
+
+                    width 255px
+                    height 371px 
+                    // padding 20px
+                    box-shadow -5px 5px 4px rgba(0, 0, 0, 0.08)
+                    color #fff
+
+                    p {
+                        font-family: ProximaNovaRegular
+                        line-height 1.1
+
+                        word-wrap break-word
+                        // word-break: break-all
+                    }
+                    
+                    p.title {
+                        // border 1px solid #fff
+                        // padding-right 12px
+                        padding 26px 34px 25px 18px
+                        font-size 30px
+                    }
+
+                    p.subtitle {
+                        padding 0px 18px 15px 18px
+                        font-size: 16px
+                    }
+
+                    button {
+                        width 216px
+                        height 60px
+                        margin-left 18px
+                        
+
+                        font-size 12px
+                        font-family ProximaNovaRegular
+
+                        color inherit
+                        border 1px solid #fff
+                        background-color transparent                        
+                    }
+
+                }
+                .card-1 {
+                    background-image url("../img/denis/sysmem_vent_back.jpg")
+                }
+                .card-2 {
+                    background-image url("../img/denis/system_house_back.jpg")
+                }
+                .card-3 {
+                    background-image url("../img/denis/system_pool_back.jpg")
+                }
+                .card-4 {
+                    background-image url("../img/denis/system_project_back.jpg")
+                }
+                .card-5 {
+                    background-image url("../img/denis/system_set_back.jpg")
+                }
+                .card-6 {
+                    background-image url("../img/denis/system_remove_back.jpg")
+                }
+            }
+        }
+    }
 }

@@ -1063,3 +1063,78 @@ main .brands section .brands-images-slider .arrow {
   cursor: pointer;
   height: 40px;
 }
+main .ventilation {
+  margin: 200px 0px;
+}
+main .ventilation .container {
+  max-width: 1112px;
+  margin: 0px auto;
+}
+main .ventilation .ventilation__box p.ventilation__title {
+  font-size: 60px;
+  font-family: ProximaNovaRegular;
+  color: #0088ce;
+  text-align: center;
+}
+main .ventilation .ventilation__box p.ventilation__subtitle {
+  font-family: ProximaNovaRegular;
+  color: #555;
+  font-size: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+main .ventilation .ventilation__box .content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+main .ventilation .ventilation__box .content .content__card {
+  background-size: contain;
+  margin-top: 28px;
+  position: relative;
+  width: 255px;
+  height: 371px;
+  box-shadow: -5px 5px 4px rgba(0,0,0,0.08);
+  color: #fff;
+}
+main .ventilation .ventilation__box .content .content__card p {
+  font-family: ProximaNovaRegular;
+  line-height: 1.1;
+  word-wrap: break-word;
+}
+main .ventilation .ventilation__box .content .content__card p.title {
+  padding: 26px 34px 25px 18px;
+  font-size: 30px;
+}
+main .ventilation .ventilation__box .content .content__card p.subtitle {
+  padding: 0px 18px 15px 18px;
+  font-size: 16px;
+}
+main .ventilation .ventilation__box .content .content__card button {
+  width: 216px;
+  height: 60px;
+  margin-left: 18px;
+  font-size: 12px;
+  font-family: ProximaNovaRegular;
+  color: inherit;
+  border: 1px solid #fff;
+  background-color: transparent;
+}
+main .ventilation .ventilation__box .content .card-1 {
+  background-image: url("../img/denis/sysmem_vent_back.jpg");
+}
+main .ventilation .ventilation__box .content .card-2 {
+  background-image: url("../img/denis/system_house_back.jpg");
+}
+main .ventilation .ventilation__box .content .card-3 {
+  background-image: url("../img/denis/system_pool_back.jpg");
+}
+main .ventilation .ventilation__box .content .card-4 {
+  background-image: url("../img/denis/system_project_back.jpg");
+}
+main .ventilation .ventilation__box .content .card-5 {
+  background-image: url("../img/denis/system_set_back.jpg");
+}
+main .ventilation .ventilation__box .content .card-6 {
+  background-image: url("../img/denis/system_remove_back.jpg");
+}
