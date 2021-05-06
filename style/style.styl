@@ -7,15 +7,18 @@ $linkColor = #00D4BF;
 header{
     background-color: white
     .header-content{
+        height 68px
         display flex
         justify-content: space-between
 
         .header-content__logo{
             max-width 232px;
-            margin 5px 5px
+            height 55px
+            margin 5px 0px 8px 15px
         }
 
         .header-content__links{
+            border solid 1px black
             width 75%
             display flex
             align-items: center
@@ -27,12 +30,16 @@ header{
             .header-content__links-item{
                 position relative
                 cursor pointer
-                height 75px
+                height 68px
                 width 100%  
                 display flex
                 align-items: center
                 justify-content: center
                 transition: 0.5s
+
+                &:nth-child(1){
+                    border solid 1px red
+                }
 
                 .header-content__hidden-links{
                     display: none
@@ -187,10 +194,11 @@ main{
         background-image: url('../img/mainBacImg.png')
     
         section{
-            width: 70%;
+            width: 1107px;
             margin: auto;
             .section-content{
                 h1{
+                    color: white
                     font-size: 96px
                     font-family: FuturaDemicRegular
 
@@ -525,9 +533,10 @@ main{
     .tabs-slider{
         margin-top 40px
         background-color: white    
-        width 100%
+        width 100%;
+        height 1101px
         .section-content{
-            width 70%
+            width 70%;
             margin: 100px auto 0
             text-align: center
             @media (max-width 1354px){
@@ -1098,14 +1107,32 @@ main{
     }
 
     .ventilations{
-        margin-top 100px
+        margin-top 150px
         section{
             width 100%
             .section-content{
                 width 70%
                 margin auto    
-                border: solid 1px black
                 text-align: center
+                @media (max-width 1354px){
+                    width 100%
+                }
+                .more-articles{
+                    margin-top 25px
+                    text-align: right 
+                    @media (max-width 1354px){
+                        text-align: center 
+                        width 100%
+                        max-width: 500px
+                        padding 40px 15px
+                        background #F3F3F3
+                        margin:112px auto
+                    }
+                    a{
+                        font-family: ProximaNovaRegular
+                        color: $linkColor
+                    }
+                }
                 h2{
                     color: #0088CE
                     font-family FuturaBookRegular
@@ -1117,7 +1144,11 @@ main{
                     font-size: 24px
                 }
                 .grid-net{
+                    margin-top 50px
                     display grid
+                    @media (max-width 1354px){
+                        display none
+                    }
                     .grid-top-row{
                         margin-top 20px
                         display grid
@@ -1142,15 +1173,21 @@ main{
                                 top 10px
                                 word-wrap: break-word
                                 h2{
-                                    padding-left 10px
-                                    width 80%
+                                    padding-left 15px
+                                    width 75%
                                     max-width: 300px
                                     color white
                                     font-family: ProximaNovaCond
                                     font-size: 30px
                                 }
+                                hr{
+                                    margin-left 0
+                                    text-align: left 
+                                    width 80%
+                                }
                                 p{
-                                    padding-left 10px
+                                    width 80%
+                                    padding-left 15px
                                     color white
                                     font-family: ProximaNovaCond
                                     font-size: 16px
@@ -1158,8 +1195,8 @@ main{
                                 img{
                                     position: absolute
                                     top 10px
-                                    right 10px
-                                    width 50px
+                                    right 5%
+                                    width 20%
                                     height auto
                                 }
                             }
@@ -1175,7 +1212,62 @@ main{
                                 font-family ProximaNovaRegular
                                 font-size: 12px
                             }
-                            border solid 1px black
+                        }
+                        .grid-item-big{
+                            position relative
+                            &:hover{
+                                button{
+                                    transition: 0.5s
+                                    background rgba(0,212,191,0.5)
+                                }
+                            }
+                            img{
+                                height 100%
+                                width 100%
+                            }
+                            .grid-item__description{
+                                width 100%
+                                text-align: left
+                                position: absolute
+                                top 10px
+                                word-wrap: break-word
+                                h2{
+                                    padding-left 10px
+                                    width 80%
+                                    max-width: 500px
+                                    color white
+                                    font-family: ProximaNovaCond
+                                    font-size: 30px
+                                }
+                                hr{
+                                    width 80%
+                                }
+                                p{
+                                    width 80%
+                                    padding-left 10px
+                                    color white
+                                    font-family: ProximaNovaCond
+                                    font-size: 16px
+                                }
+                                img{
+                                    position: absolute
+                                    top 10px
+                                    right 10px
+                                    width 10%
+                                    height auto
+                                }
+                            }
+                            button{
+                                color: white
+                                width 40%
+                                padding 15px
+                                position: absolute
+                                bottom: 10px
+                                left 5%
+                                background transparent
+                                font-family ProximaNovaRegular
+                                font-size: 12px
+                            }
                         }
                     }
                     .grid-bot-row{
@@ -1183,9 +1275,197 @@ main{
                         display grid
                         grid-template-columns: 1fr 2fr 1fr
                         grid-gap: 20px
+                        .grid-item{
+                            position relative
+                            &:hover{
+                                button{
+                                    transition: 0.5s
+                                    background rgba(0,212,191,0.5)
+                                }
+                            }
+                            img{
+                                height 100%
+                                width 100%
+                            }
+                            .grid-item__description{
+                                text-align: left
+                                position: absolute
+                                top 10px
+                                word-wrap: break-word
+                                h2{
+                                    padding-left 15px
+                                    width 75%
+                                    max-width: 300px
+                                    color white
+                                    font-family: ProximaNovaCond
+                                    font-size: 30px
+                                }
+                                hr{
+                                    margin-left 0
+                                    text-align: left 
+                                    width 80%
+                                }
+                                p{
+                                    width 80%
+                                    padding-left 15px
+                                    color white
+                                    font-family: ProximaNovaCond
+                                    font-size: 16px
+                                }
+                                img{
+                                    position: absolute
+                                    top 10px
+                                    right 5%
+                                    width 20%
+                                    height auto
+                                }
+                            }
+                            button{
+                                color: white
+                                border: solid 1px white
+                                width 80%
+                                padding 15px
+                                position: absolute
+                                bottom: 10px
+                                left 10%
+                                background transparent
+                                font-family ProximaNovaRegular
+                                font-size: 12px
+                            }
+                        }
+                        .grid-item-big{
+                            position relative
+                            &:hover{
+                                button{
+                                    transition: 0.5s
+                                    background rgba(0,212,191,0.5)
+                                }
+                            }
+                            img{
+                                height 100%
+                                width 100%
+                            }
+                            .grid-item__description{
+                                text-align: left
+                                position: absolute
+                                top 10px
+                                word-wrap: break-word
+                                h2{
+                                    padding-left 10px
+                                    width 80%
+                                    max-width: 500px
+                                    color white
+                                    font-family: ProximaNovaCond
+                                    font-size: 30px
+                                }
+                                hr{
+                                    width 80%
+                                }
+                                p{
+                                    width 80%
+                                    padding-left 10px
+                                    color white
+                                    font-family: ProximaNovaCond
+                                    font-size: 16px
+                                }
+                                img{
+                                    position: absolute
+                                    top 10px
+                                    right 10px
+                                    width 10%
+                                    height auto
+                                }
+                            }
+                            button{
+                                color: white
+                                width 40%
+                                padding 15px
+                                position: absolute
+                                bottom: 10px
+                                left 5%
+                                background transparent
+                                font-family ProximaNovaRegular
+                                font-size: 12px
+                            }
+                        }
                     }
-                    .grid-item{
-                        border solid 1px black
+                }
+                .slider-vent{
+                    margin-top 50px
+                    display none
+                    @media (max-width 1354px){
+                        display flex
+                        justify-content: center
+                    }
+                    .slider{
+                        width 100%
+                        .slider-item{
+                            width 100%
+                            max-width: 500px
+                            max-height 318px
+                            margin auto
+                            position: relative
+                            .arrow{
+                                cursor pointer
+                                position absolute
+                                width 30px
+                                &:first-child{
+                                    left: 15px
+                                    top 110px
+                                }
+                                &:last-child{
+                                    right: 15px
+                                    top 110px  
+                                }
+                            }
+                            img{
+                                width 100%
+                            }
+                            button{
+                                cursor pointer
+                                font-family: ProximaNovaRegular
+                                color white
+                                border solid 1px white
+                                background rgba(0,212,191,0.6)
+                                width 70%
+                                position absolute
+                                bottom: -90px
+                                left: 15%
+                                padding 15px
+                            }
+                            .slider-item__description{
+                                width 100%
+                                top 15px
+                                position absolute
+                                text-align: left
+                                img{
+                                    height 55px
+                                    width auto
+                                    position absolute
+                                    top -5px
+                                    right 15px
+                                }
+                                h2{
+                                    word-wrap break-word
+                                    width 60%
+                                    margin-left: 15%
+                                    color: white
+                                    font-size: 35px
+                                    font-family: ProximaNovaCond
+                                }
+                                hr{
+                                    margin-left 0
+                                    width 80%
+                                }
+                                p{
+                                    width 60%
+                                    margin-left: 15%
+                                    color: white
+                                    font-size: 18px
+                                    font-family: ProximaNovaCond
+                                }
+                            }
+                        }
                     }
                 }
             }

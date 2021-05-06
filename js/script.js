@@ -313,3 +313,60 @@ nextBrand.addEventListener('click', () => {
     }
     image.src = imagesBrand[countBrand]
 })
+
+//Ventilations slider
+
+const backVent = document.querySelector('#backVent')
+const nextVent= document.querySelector('#nextVent')
+
+var countVent = 0
+
+const arrayH2Vents = [
+    'Системы вентиляции в многоквартирных домах',
+    'Системы для домов и коттеджей',
+    'Системы для бассейнов коммерческого и частного использования',
+    'Особенности проекта системы вентиляции',
+    'Особенности установки вентиляционных систем в коттеджных поселках',
+    'Удаленное обслуживание системы'
+]
+
+const arrayPVents = [
+    `Энергоэффективные
+    вентиляционные решения
+    для помещений небольшой площади в агрессивной среде`,
+    `Энергоэффективные
+    вентиляционные решения
+    для помещений с большой площадью`,
+    `Энергоэффективные вентиляционные решения для помещений с повышенной влажностью`,
+    `Круглосуточный сервис
+    удаленно устранит 90%
+    неисправночтей в течение 24 часов`,
+    `Корпоративные предложения по установке 
+    и обслуживанию. Особые условия на этапе
+    строительства`,
+    `Круглосуточный сервис
+    удаленно устранит 90%
+    неисправночтей в течение 24 часов`
+]
+
+backVent.addEventListener('click', () => {
+    const h2Vent = document.querySelector('#h2Vent')
+    const pVent = document.querySelector('#pVent')
+    countVent--
+    if(countVent < 0){
+        countVent = arrayH2Vents.length - 1
+    }
+    h2Vent.innerHTML = arrayH2Vents[countVent]
+    pVent.innerHTML = arrayPVents[countVent]
+})
+
+nextVent.addEventListener('click', () => {
+    const h2Vent = document.querySelector('#h2Vent')
+    const pVent = document.querySelector('#pVent')
+    countVent++
+    if(countVent >= arrayH2Vents.length - 1){
+        countVent = 0
+    }
+    h2Vent.innerHTML = arrayH2Vents[countVent]
+    pVent.innerHTML = arrayPVents[countVent]
+})

@@ -4,14 +4,17 @@ header {
   background-color: #fff;
 }
 header .header-content {
+  height: 68px;
   display: flex;
   justify-content: space-between;
 }
 header .header-content .header-content__logo {
   max-width: 232px;
-  margin: 5px 5px;
+  height: 55px;
+  margin: 5px 0px 8px 15px;
 }
 header .header-content .header-content__links {
+  border: solid 1px #000;
   width: 75%;
   display: flex;
   align-items: center;
@@ -24,12 +27,15 @@ header .header-content .header-content__links {
 header .header-content .header-content__links .header-content__links-item {
   position: relative;
   cursor: pointer;
-  height: 75px;
+  height: 68px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: 0.5s;
+}
+header .header-content .header-content__links .header-content__links-item:nth-child(1) {
+  border: solid 1px #f00;
 }
 header .header-content .header-content__links .header-content__links-item .header-content__hidden-links {
   display: none;
@@ -167,10 +173,11 @@ main .back-img-house {
   background-image: url("../img/mainBacImg.png");
 }
 main .back-img-house section {
-  width: 70%;
+  width: 1107px;
   margin: auto;
 }
 main .back-img-house section .section-content h1 {
+  color: #fff;
   font-size: 96px;
   font-family: FuturaDemicRegular;
 }
@@ -500,6 +507,7 @@ main .tabs-slider {
   margin-top: 40px;
   background-color: #fff;
   width: 100%;
+  height: 1101px;
 }
 main .tabs-slider .section-content {
   width: 70%;
@@ -1071,7 +1079,7 @@ main .brands section .brands-images-slider .arrow {
   height: 40px;
 }
 main .ventilations {
-  margin-top: 100px;
+  margin-top: 150px;
 }
 main .ventilations section {
   width: 100%;
@@ -1079,8 +1087,30 @@ main .ventilations section {
 main .ventilations section .section-content {
   width: 70%;
   margin: auto;
-  border: solid 1px #000;
   text-align: center;
+}
+@media (max-width: 1354px) {
+  main .ventilations section .section-content {
+    width: 100%;
+  }
+}
+main .ventilations section .section-content .more-articles {
+  margin-top: 25px;
+  text-align: right;
+}
+@media (max-width: 1354px) {
+  main .ventilations section .section-content .more-articles {
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    padding: 40px 15px;
+    background: #f3f3f3;
+    margin: 112px auto;
+  }
+}
+main .ventilations section .section-content .more-articles a {
+  font-family: ProximaNovaRegular;
+  color: #00d4bf;
 }
 main .ventilations section .section-content h2 {
   color: #0088ce;
@@ -1093,7 +1123,13 @@ main .ventilations section .section-content h3 {
   font-size: 24px;
 }
 main .ventilations section .section-content .grid-net {
+  margin-top: 50px;
   display: grid;
+}
+@media (max-width: 1354px) {
+  main .ventilations section .section-content .grid-net {
+    display: none;
+  }
 }
 main .ventilations section .section-content .grid-net .grid-top-row {
   margin-top: 20px;
@@ -1104,7 +1140,6 @@ main .ventilations section .section-content .grid-net .grid-top-row {
 }
 main .ventilations section .section-content .grid-net .grid-top-row .grid-item {
   position: relative;
-  border: solid 1px #000;
 }
 main .ventilations section .section-content .grid-net .grid-top-row .grid-item:hover button {
   transition: 0.5s;
@@ -1121,15 +1156,21 @@ main .ventilations section .section-content .grid-net .grid-top-row .grid-item .
   word-wrap: break-word;
 }
 main .ventilations section .section-content .grid-net .grid-top-row .grid-item .grid-item__description h2 {
-  padding-left: 10px;
-  width: 80%;
+  padding-left: 15px;
+  width: 75%;
   max-width: 300px;
   color: #fff;
   font-family: ProximaNovaCond;
   font-size: 30px;
 }
+main .ventilations section .section-content .grid-net .grid-top-row .grid-item .grid-item__description hr {
+  margin-left: 0;
+  text-align: left;
+  width: 80%;
+}
 main .ventilations section .section-content .grid-net .grid-top-row .grid-item .grid-item__description p {
-  padding-left: 10px;
+  width: 80%;
+  padding-left: 15px;
   color: #fff;
   font-family: ProximaNovaCond;
   font-size: 16px;
@@ -1137,8 +1178,8 @@ main .ventilations section .section-content .grid-net .grid-top-row .grid-item .
 main .ventilations section .section-content .grid-net .grid-top-row .grid-item .grid-item__description img {
   position: absolute;
   top: 10px;
-  right: 10px;
-  width: 50px;
+  right: 5%;
+  width: 20%;
   height: auto;
 }
 main .ventilations section .section-content .grid-net .grid-top-row .grid-item button {
@@ -1153,14 +1194,254 @@ main .ventilations section .section-content .grid-net .grid-top-row .grid-item b
   font-family: ProximaNovaRegular;
   font-size: 12px;
 }
+main .ventilations section .section-content .grid-net .grid-top-row .grid-item-big {
+  position: relative;
+}
+main .ventilations section .section-content .grid-net .grid-top-row .grid-item-big:hover button {
+  transition: 0.5s;
+  background: rgba(0,212,191,0.5);
+}
+main .ventilations section .section-content .grid-net .grid-top-row .grid-item-big img {
+  height: 100%;
+  width: 100%;
+}
+main .ventilations section .section-content .grid-net .grid-top-row .grid-item-big .grid-item__description {
+  width: 100%;
+  text-align: left;
+  position: absolute;
+  top: 10px;
+  word-wrap: break-word;
+}
+main .ventilations section .section-content .grid-net .grid-top-row .grid-item-big .grid-item__description h2 {
+  padding-left: 10px;
+  width: 80%;
+  max-width: 500px;
+  color: #fff;
+  font-family: ProximaNovaCond;
+  font-size: 30px;
+}
+main .ventilations section .section-content .grid-net .grid-top-row .grid-item-big .grid-item__description hr {
+  width: 80%;
+}
+main .ventilations section .section-content .grid-net .grid-top-row .grid-item-big .grid-item__description p {
+  width: 80%;
+  padding-left: 10px;
+  color: #fff;
+  font-family: ProximaNovaCond;
+  font-size: 16px;
+}
+main .ventilations section .section-content .grid-net .grid-top-row .grid-item-big .grid-item__description img {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 10%;
+  height: auto;
+}
+main .ventilations section .section-content .grid-net .grid-top-row .grid-item-big button {
+  color: #fff;
+  width: 40%;
+  padding: 15px;
+  position: absolute;
+  bottom: 10px;
+  left: 5%;
+  background: transparent;
+  font-family: ProximaNovaRegular;
+  font-size: 12px;
+}
 main .ventilations section .section-content .grid-net .grid-bot-row {
   margin-top: 20px;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   grid-gap: 20px;
 }
-main .ventilations section .section-content .grid-net .grid-item {
-  border: solid 1px #000;
+main .ventilations section .section-content .grid-net .grid-bot-row .grid-item {
+  position: relative;
+}
+main .ventilations section .section-content .grid-net .grid-bot-row .grid-item:hover button {
+  transition: 0.5s;
+  background: rgba(0,212,191,0.5);
+}
+main .ventilations section .section-content .grid-net .grid-bot-row .grid-item img {
+  height: 100%;
+  width: 100%;
+}
+main .ventilations section .section-content .grid-net .grid-bot-row .grid-item .grid-item__description {
+  text-align: left;
+  position: absolute;
+  top: 10px;
+  word-wrap: break-word;
+}
+main .ventilations section .section-content .grid-net .grid-bot-row .grid-item .grid-item__description h2 {
+  padding-left: 15px;
+  width: 75%;
+  max-width: 300px;
+  color: #fff;
+  font-family: ProximaNovaCond;
+  font-size: 30px;
+}
+main .ventilations section .section-content .grid-net .grid-bot-row .grid-item .grid-item__description hr {
+  margin-left: 0;
+  text-align: left;
+  width: 80%;
+}
+main .ventilations section .section-content .grid-net .grid-bot-row .grid-item .grid-item__description p {
+  width: 80%;
+  padding-left: 15px;
+  color: #fff;
+  font-family: ProximaNovaCond;
+  font-size: 16px;
+}
+main .ventilations section .section-content .grid-net .grid-bot-row .grid-item .grid-item__description img {
+  position: absolute;
+  top: 10px;
+  right: 5%;
+  width: 20%;
+  height: auto;
+}
+main .ventilations section .section-content .grid-net .grid-bot-row .grid-item button {
+  color: #fff;
+  border: solid 1px #fff;
+  width: 80%;
+  padding: 15px;
+  position: absolute;
+  bottom: 10px;
+  left: 10%;
+  background: transparent;
+  font-family: ProximaNovaRegular;
+  font-size: 12px;
+}
+main .ventilations section .section-content .grid-net .grid-bot-row .grid-item-big {
+  position: relative;
+}
+main .ventilations section .section-content .grid-net .grid-bot-row .grid-item-big:hover button {
+  transition: 0.5s;
+  background: rgba(0,212,191,0.5);
+}
+main .ventilations section .section-content .grid-net .grid-bot-row .grid-item-big img {
+  height: 100%;
+  width: 100%;
+}
+main .ventilations section .section-content .grid-net .grid-bot-row .grid-item-big .grid-item__description {
+  text-align: left;
+  position: absolute;
+  top: 10px;
+  word-wrap: break-word;
+}
+main .ventilations section .section-content .grid-net .grid-bot-row .grid-item-big .grid-item__description h2 {
+  padding-left: 10px;
+  width: 80%;
+  max-width: 500px;
+  color: #fff;
+  font-family: ProximaNovaCond;
+  font-size: 30px;
+}
+main .ventilations section .section-content .grid-net .grid-bot-row .grid-item-big .grid-item__description hr {
+  width: 80%;
+}
+main .ventilations section .section-content .grid-net .grid-bot-row .grid-item-big .grid-item__description p {
+  width: 80%;
+  padding-left: 10px;
+  color: #fff;
+  font-family: ProximaNovaCond;
+  font-size: 16px;
+}
+main .ventilations section .section-content .grid-net .grid-bot-row .grid-item-big .grid-item__description img {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 10%;
+  height: auto;
+}
+main .ventilations section .section-content .grid-net .grid-bot-row .grid-item-big button {
+  color: #fff;
+  width: 40%;
+  padding: 15px;
+  position: absolute;
+  bottom: 10px;
+  left: 5%;
+  background: transparent;
+  font-family: ProximaNovaRegular;
+  font-size: 12px;
+}
+main .ventilations section .section-content .slider-vent {
+  margin-top: 50px;
+  display: none;
+}
+@media (max-width: 1354px) {
+  main .ventilations section .section-content .slider-vent {
+    display: flex;
+    justify-content: center;
+  }
+}
+main .ventilations section .section-content .slider-vent .slider {
+  width: 100%;
+}
+main .ventilations section .section-content .slider-vent .slider .slider-item {
+  width: 100%;
+  max-width: 500px;
+  max-height: 318px;
+  margin: auto;
+  position: relative;
+}
+main .ventilations section .section-content .slider-vent .slider .slider-item .arrow {
+  cursor: pointer;
+  position: absolute;
+  width: 30px;
+}
+main .ventilations section .section-content .slider-vent .slider .slider-item .arrow:first-child {
+  left: 15px;
+  top: 110px;
+}
+main .ventilations section .section-content .slider-vent .slider .slider-item .arrow:last-child {
+  right: 15px;
+  top: 110px;
+}
+main .ventilations section .section-content .slider-vent .slider .slider-item img {
+  width: 100%;
+}
+main .ventilations section .section-content .slider-vent .slider .slider-item button {
+  cursor: pointer;
+  font-family: ProximaNovaRegular;
+  color: #fff;
+  border: solid 1px #fff;
+  background: rgba(0,212,191,0.6);
+  width: 70%;
+  position: absolute;
+  bottom: -90px;
+  left: 15%;
+  padding: 15px;
+}
+main .ventilations section .section-content .slider-vent .slider .slider-item .slider-item__description {
+  width: 100%;
+  top: 15px;
+  position: absolute;
+  text-align: left;
+}
+main .ventilations section .section-content .slider-vent .slider .slider-item .slider-item__description img {
+  height: 55px;
+  width: auto;
+  position: absolute;
+  top: -5px;
+  right: 15px;
+}
+main .ventilations section .section-content .slider-vent .slider .slider-item .slider-item__description h2 {
+  word-wrap: break-word;
+  width: 60%;
+  margin-left: 15%;
+  color: #fff;
+  font-size: 35px;
+  font-family: ProximaNovaCond;
+}
+main .ventilations section .section-content .slider-vent .slider .slider-item .slider-item__description hr {
+  margin-left: 0;
+  width: 80%;
+}
+main .ventilations section .section-content .slider-vent .slider .slider-item .slider-item__description p {
+  width: 60%;
+  margin-left: 15%;
+  color: #fff;
+  font-size: 18px;
+  font-family: ProximaNovaCond;
 }
 main .map section {
   width: 100%;
