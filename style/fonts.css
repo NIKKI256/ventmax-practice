@@ -5,6 +5,12 @@
 }
 
 @font-face {
+    font-family: 'FuturaDemicRegular';
+    src: url('./fonts/futurademic\ \(2\).otf') format('truetype');
+    font-weight: 600; 
+}
+
+@font-face {
     font-family: 'ProximaNovaBold';
     src: url('./fonts/ProximaNovaBold.ttf')  format('truetype');
     font-weight: 600;
@@ -22,13 +28,7 @@
 }
 
 @font-face {
-    font-family: 'FuturaDemicRegular';
-    src: url('./fonts/FuturademiCRegular.ttf')  format('truetype');
-    font-weight: 600;
-}
-
-@font-face {
     font-family: 'FuturaBookRegular';
     src: url('./fonts/FuturaBookRegular.ttf')  format('truetype');
-    font-weight: 600;
+    font-weight: 400;
 }
