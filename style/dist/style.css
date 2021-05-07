@@ -1555,6 +1555,69 @@ main .map section .section-content .map-content .display-map {
     height: 240px;
   }
 }
+main .articles {
+  width: 1112px;
+  margin: 100px auto;
+}
+main .articles h2 {
+  color: #0088ce;
+  font-family: FuturaBookRegular;
+  font-size: 60px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+main .articles .content {
+  display: flex;
+  justify-content: space-between;
+}
+main .articles .menu {
+  background: #f3f3f3;
+  width: 255px;
+}
+main .articles .article {
+  display: flex;
+  justify-content: space-between;
+  width: 841px;
+  margin-bottom: 30px;
+}
+main .articles .article .article__img {
+  background-image: url("../img/article_back.jpg");
+  width: 442px;
+  height: 435px;
+}
+main .articles .article .article__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0px 5px 0px 30px;
+  width: 400px;
+}
+main .articles .article .article__text .article__text__title {
+  font-family: ProximaNovaRegular;
+  font-size: 40px;
+  line-height: 0.9;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #0088ce;
+}
+main .articles .article .article__text .article__text__text {
+  font-family: ProximaNovaRegular;
+  font-size: 16px;
+  line-height: 0.9;
+  letter-spacing: 0em;
+  text-align: left;
+}
+main .articles .article .article__text button {
+  cursor: pointer;
+  font-family: ProximaNovaRegular;
+  color: #000;
+  border: solid 1px;
+  background-color: transparent;
+  width: 70%;
+  bottom: -90px;
+  left: 15%;
+  padding: 15px;
+}
 footer {
   background: #006fb9;
   margin-top: 80px;
