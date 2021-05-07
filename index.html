@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/dist/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
     <title>Ventmax</title>
 </head>
 <body>
@@ -402,7 +403,26 @@
                 <div class="section-content">
                     <h2>НАШИ ПРОЕКТЫ</h2>
                     <h3>Проекты, созданные и реализованные нашей компанией</h3>
-                    <div class="slider-and-arrows">
+                    <!-- Slider main container -->
+                    <div class="swiper-container">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+                    
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev">11111</div>
+                        <div class="swiper-button-next">22222</div>
+                    
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                    <!-- <div class="slider-and-arrows">
                         <img class="larch" src="./style/img/LeftArch.png">
                         <div class="slider-projects">
                             <div class="slider-projects__item">
@@ -465,8 +485,8 @@
                             </div>
                         </div>
                         <img class="rarch" src="./style/img/RigthArch.png">
-                    </div>
-                    <div class="slider-and-arrows-mob">
+                    </div> -->
+                    <!-- <div class="slider-and-arrows-mob">
                         <div class="slider">
                             <div class="slider-item">
                                 <img src="./style/img/Project1Mobile.png">
@@ -490,7 +510,7 @@
                                 <button type="button">СМОТРЕТЬ</button>
                             </div> 
                         </div>
-                    </div>
+                    </div> -->
                     <div class="a-descr">
                         <a href="#"><i>Все проекты компании</i></a>
                     </div>
@@ -763,6 +783,7 @@
         </section>
     </footer>
 
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="./js/script.js"></script>
 </body>
 </html>
