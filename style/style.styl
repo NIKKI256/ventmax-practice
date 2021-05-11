@@ -2,15 +2,20 @@
 @import url('../fonts.css');
 
 $linkColor = #00D4BF;
+$ProximaNovaRegular = 'ProximaNovaRegular'
+$FuturaDemicRegular = 'FuturaDemicRegular'
 
+.df__space-between{
+    display flex
+    justify-content: space-between    
+}
 
 header{
     width 100%
     background-color: white
     .header-content{
         height 68px
-        display flex
-        justify-content: space-between
+        @extend .df__space-between
 
         .header-content__logo{
             max-width 232px;
@@ -43,7 +48,7 @@ header{
                 }
 
                 a{
-                    font-family: 'ProximaNovaRegular'
+                    font-family: ProximaNovaRegular
                     font-size: 18px
                     color: #555555
                     text-align: center
@@ -55,7 +60,7 @@ header{
                         appearance: none;
                         background-color: transparent;
                         text-align-last:center;
-                        font-family: 'ProximaNovaRegular'
+                        font-family: ProximaNovaRegular
                         font-size: 18px
                         cursor: inherit;
                         outline: none
@@ -210,7 +215,7 @@ main{
                     width: 100%;
                     color: white
                     font-size: 96px
-                    font-family: 'FuturaDemicRegular'
+                    font-family: FuturaDemicRegular
                     font-weight: 600
                     line-height: 110px
 
@@ -257,7 +262,7 @@ main{
                         z-index 11
                         cursor pointer
                         font-size: 18px
-                        font-family: 'FuturaDemicRegular'
+                        font-family: FuturaDemicRegular
                         color: white
                         background-color: rgba($linkColor,0.6)
                         transition: 0.5s
@@ -352,9 +357,9 @@ main{
                     }
                 }
                 .section-content__description{
-                    margin: 97px 0 0 -27px;
+                    margin: 97px 0 0 0;
                     color: white
-                    font-size: 17px
+                    font-size: 17.5px
                     font-family: ProximaNovaRegular
                 }
                 .section-content__icons{
@@ -475,8 +480,7 @@ main{
                 .section-content__blocks{
                     width: 100%
                     margin: 31px 0 0 0 
-                    display flex
-                    justify-content: space-between
+                    @extend .df__space-between
 
                     @media (max-width 1500px){
                         flex-wrap: wrap    
@@ -601,8 +605,7 @@ main{
             }
 
             .tabs-buttons{
-                display flex   
-                justify-content: space-between
+                @extend .df__space-between
                 .tabs-buttons__item{
                     padding 17px
                     width 100%
@@ -621,8 +624,7 @@ main{
 
             .tabs-info__team{
                 margin: 170px 0 0 7px;
-                display flex
-                justify-content: space-between
+                @extend .df__space-between
                 .tabs-info__avatar{
                     img{
                         width 325px
@@ -654,8 +656,7 @@ main{
                 }
                 .tabs-info__slider{
                     margin: 52px 0 0 -7px;
-                    display flex
-                    justify-content: space-between
+                    @extend .df__space-between
                     img{
                         cursor pointer
                         width 73px
@@ -682,8 +683,7 @@ main{
                     font-family: ProximaNovaRegular
                 }
                 .tabs-info__images{
-                    display flex
-                    justify-content: space-between;
+                    @extend .df__space-between
                     margin-top 50px
                     .tabs-info__images-item{
                         width 25%;
@@ -747,8 +747,7 @@ main{
             .tabs-info__sertidication{
                 margin-top 50px
                 .sertification-images{
-                    display flex
-                    justify-content: space-between
+                    @extend .df__space-between
                     .sertificatino-images__item{
                         word-break: break-all
                         width 15%
@@ -804,8 +803,7 @@ main{
                 .tabs-adapt__teams{
                     .tabs-adapt__teams-slider{
                         margin-top 50px
-                        display flex
-                        justify-content: space-between
+                        @extend .df__space-between
                         align-items: center
                         .arrows{
                             cursor: pointer
@@ -831,8 +829,7 @@ main{
                     }
                     .tabs-adapt__companies-slider{
                         margin-top 50px
-                        display flex
-                        justify-content: space-between
+                        @extend .df__space-between
                         align-items: center
                         .arrows{
                             cursor: pointer
@@ -870,8 +867,7 @@ main{
                     }
                     .tabs-adapt__showroom-slider{
                         margin-top 50px
-                        display flex
-                        justify-content: space-between
+                        @extend .df__space-between
                         align-items: center
                         .arrows{
                             cursor: pointer
@@ -934,11 +930,11 @@ main{
             .section-content{
                 text-align: center;
                 padding-top: 50px
+                position: relative
                 h2{
                     color: white
                     font-family: FuturaDemicRegular
-                    font-size: 60px
-                    margin: 10px 0 0 0;
+                    font-size: 57px
                     @media (max-width 1354px){
                         font-size: 30px
                     }
@@ -946,11 +942,95 @@ main{
                 h3{
                     color: white
                     font-family: ProximaNovaRegular
-                    font-size: 24px
+                    font-size: 23.5px
+                    margin: 16px 0 0 0 
+                }
+                .swiper-container{
+                    width auto
+                    height 415px
+                    margin: 45px 0 0 0
+                    position: relative
+                    .swiper-slide{
+                        .slider-projects__item{
+                            position relative
+                            &:hover{
+                                .slider-projects__item-description{
+                                    h2,h3{
+                                        color: #00FFC2
+                                    }
+                                }
+                            }
+                            .slider-projects__item-description{
+                                text-align left
+                                position absolute
+                                top 0
+                                h2{
+                                    text-transform: uppercase
+                                    transition: 0.5s
+                                    padding: 15px 0 0 15px
+                                    font-family: ProximaNovaRegular
+                                    font-size: 24px
+                                }
+                                h3{
+                                    transition: 0.5s
+                                    color: white
+                                    font-family: ProximaNovaRegular
+                                    font-size: 18px
+                                    margin: 0 0 0 15px
+                                }
+                                hr{
+                                    margin: 15px 0 0 0
+                                    width 80%
+                                }
+                                p{
+                                    color: white
+                                    font-family: ProximaNovaRegular
+                                    font-size: 16px
+                                    padding: 15px 0 0 15px
+                                    line-height: 1
+                                }
+                            }
+                            .projects-btn{
+                                color: white
+                                cursor pointer
+                                position: absolute;
+                                bottom: 30px;
+                                font-size: 12px
+                                font-family: ProximaNovaRegular
+                                border: solid 1px #fff;
+                                width: 90%;
+                                left: 5%;
+                                padding: 18px;
+                                background none
+                                transition: 0.5s
+                                &:hover{
+                                    background rgba(0,255,194,0.5)
+                                }
+                            }
+                        }
+                    }
+                }
+                .swiper-button-prev{
+                    position absolute
+                    top 55%
+                    left -100px
+                    img{
+                        height 30px
+                        width auto
+                    }
+                }
+                .swiper-button-next{
+                    position absolute
+                    top 55%
+                    right -100px
+                    img{
+                        height 30px
+                        width auto
+                    }
                 }
                 .a-descr{
                     text-align: right 
-                    padding: 41px 20px 56px 0;
+                    padding: 35px 20px 42px 0;
                     a{
                         font-size: 18px
                         font-family ProximaNovaRegular
@@ -960,148 +1040,6 @@ main{
                         width 100%
                         text-align: center
                         padding 25px 0 25px 0
-                    }
-                }
-                .slider-and-arrows{
-                    margin-top 25px
-                    align-items: center
-                    position: relative
-                    @media (max-width 1354px){
-                        display: none
-                    }
-                    .larch{
-                        cursor pointer
-                        position: absolute
-                        top 40%
-                        left: -70px
-                        width 32px
-                        height 52px
-                    }    
-                    .rarch{
-                        cursor pointer
-                        position: absolute
-                        top 40%
-                        right: -70px
-                        width 32px
-                        height 52px
-                    }
-                    .slider-projects{
-                        display flex
-                        justify-content: space-between
-                        .slider-projects__item{
-                            height 415px
-                            position: relative
-                            &:hover{
-                                .slider-projects__item-description{
-                                    h2, h3{
-                                        transition: 0.5s
-                                        color: $linkColor
-                                    } 
-                                }
-                                .projects-btn{
-                                    transition: 0.5s
-                                    background: rgba(0,212,191,0.5)
-                                }
-                            }
-                            .slider-projects__item-description{
-                                padding-top 15px
-                                text-align: left
-                                position absolute
-                                top 0
-                                h2, h3, p{
-                                    padding-left 10px
-                                }
-                                h2{
-                                    font-family: ProximaNovaRegular
-                                    font-size: 24px
-                                }
-                                h3{
-                                    font-family: ProximaNovaRegular
-                                    font-size: 18px
-                                }
-                                hr{
-                                    margin: 20px 20px 20px 0px
-                                }
-                                p{
-                                    color: white
-                                    font-family: ProximaNovaCond
-                                    font-size: 16px
-                                }
-                            }
-                            .projects-btn{
-                                cursor pointer
-                                background:none
-                                color: white
-                                border solid 1px white
-                                font-family: ProximaNovaRegular
-                                font-size: 14px
-                                width 80%
-                                padding 15px
-                                position absolute
-                                bottom: 10px
-                                right 10%
-                            }
-                        } 
-                    }
-                }
-                .slider-and-arrows-mob{
-                    margin-top 50px
-                    display: none
-                    @media (max-width 1354px){
-                        display: block
-                    }
-                    .slider-item{
-                        width 100%
-                        max-width: 483px
-                        position relative
-                        margin: auto
-                        .slider-item__description{
-                            text-align: left
-                            position: absolute
-                            top 25px
-                            .slider-item__nav{
-                                display flex
-                                justify-content: space-between
-                                h2,h3{
-                                    width 280px
-                                    text-align: left
-                                }
-                                img{
-                                    cursor pointer
-                                    width 20px
-                                    height auto
-                                }
-                            }
-                            hr{
-                                margin-right 100px
-                            }
-                            p{  
-                                line-height: 20px
-                                font-family: ProximaNovaCond
-                                font-size: 18px
-                                color: white
-                                padding 10px 100px
-                            }
-                        }
-                        button{
-                            font-family: ProximaNovaRegular
-                            cursor pointer
-                            color: white
-                            border solid 1px white
-                            background: rgba(0,212,191,0.8)
-                            position: absolute
-                            bottom: 0
-                            width 60%
-                            left 20%
-                            height 60px
-                            margin-top 20px
-                            margin-bottom 20px
-                        }
-                        img{
-                            margin auto
-                            height 437px
-                            width 100%
-                        }
                     }
                 }
             }
@@ -1133,8 +1071,7 @@ main{
             }
             .brands-images{
                 margin-top 100px
-                display flex
-                justify-content: space-between
+                @extend .df__space-between
                 @media (max-width 1354px){
                     display none
                 }
@@ -1154,8 +1091,7 @@ main{
                 @media (max-width 1354px){
                     width 90%
                     margin: 50px auto 0
-                    display flex
-                    justify-content: space-between
+                    @extend .df__space-between
                     align-items: center
                     min-height: 140px
                 }
@@ -1219,12 +1155,6 @@ main{
                         margin: 3px 0 0 26px;
                         .grid-item{
                             position relative
-                            &:hover{
-                                button{
-                                    transition: 0.5s
-                                    background rgba(0,212,191,0.5)
-                                }
-                            }
                             img{
                                 height 100%
                                 width 100%
@@ -1266,6 +1196,7 @@ main{
                                 }
                             }
                             button{
+                                cursor pointer
                                 color: white
                                 border: solid 1px white
                                 width 80%
@@ -1276,16 +1207,14 @@ main{
                                 background transparent
                                 font-family ProximaNovaRegular
                                 font-size: 12px
+                                transition: 0.5s
+                                &:hover{
+                                    background rgba(0,212,191,0.5)
+                                }
                             }
                         }
                         .grid-item-big{
                             position relative
-                            &:hover{
-                                button{
-                                    transition: 0.5s
-                                    background rgba(0,212,191,0.5)
-                                }
-                            }
                             img{
                                 height 100%
                                 width 100%
@@ -1323,6 +1252,7 @@ main{
                                 }
                             }
                             button{
+                                cursor pointer
                                 color: white
                                 width 40%
                                 padding 15px
@@ -1332,6 +1262,10 @@ main{
                                 background transparent
                                 font-family ProximaNovaRegular
                                 font-size: 12px
+                                transition: 0.5s
+                                &:hover{
+                                    background rgba(0,212,191,0.5)
+                                }
                             }
                         }
                     }
@@ -1343,12 +1277,6 @@ main{
                         margin: 9px 0 0 26px;
                         .grid-item{
                             position relative
-                            &:hover{
-                                button{
-                                    transition: 0.5s
-                                    background rgba(0,212,191,0.5)
-                                }
-                            }
                             img{
                                 height 100%
                                 width 100%
@@ -1387,6 +1315,7 @@ main{
                                 }
                             }
                             button{
+                                cursor pointer
                                 color: white
                                 border: solid 1px white
                                 width 80%
@@ -1397,16 +1326,14 @@ main{
                                 background transparent
                                 font-family ProximaNovaRegular
                                 font-size: 12px
+                                transition: 0.5s
+                                &:hover{
+                                    background rgba(0,212,191,0.5)
+                                }
                             }
                         }
                         .grid-item-big{
                             position relative
-                            &:hover{
-                                button{
-                                    transition: 0.5s
-                                    background rgba(0,212,191,0.5)
-                                }
-                            }
                             img{
                                 height 100%
                                 width 100%
@@ -1443,6 +1370,7 @@ main{
                                 }
                             }
                             button{
+                                cursor pointer
                                 color: white
                                 width 40%
                                 padding 15px
@@ -1452,6 +1380,10 @@ main{
                                 background transparent
                                 font-family ProximaNovaRegular
                                 font-size: 12px
+                                transition: 0.5s
+                                &:hover{
+                                    background rgba(0,212,191,0.5)
+                                }
                             }
                         }
                     }
@@ -1613,7 +1545,7 @@ main{
                             padding: 19px;
                             width: 332px;
                             margin: 63px 0 0 295px;
-                            background: #00d4bf;
+                            background: $linkColor;
                             font-size: 17px;
                             font-family: FuturaDemicRegular;
                             @media (max-width 1354px){

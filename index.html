@@ -404,27 +404,11 @@
                     <h2>НАШИ ПРОЕКТЫ</h2>
                     <h3>Проекты, созданные и реализованные нашей компанией</h3>
                     <!-- Slider main container -->
-                    <div class="swiper-container">
+                    <div class="swiper-container mySwiper">
                         <!-- Additional required wrapper -->
                         <div class="swiper-wrapper">
                         <!-- Slides -->
-                        <div class="swiper-slide">Slide 1</div>
-                        <div class="swiper-slide">Slide 2</div>
-                        <div class="swiper-slide">Slide 3</div>
-                        </div>
-                        <!-- If we need pagination -->
-                        <div class="swiper-pagination"></div>
-                    
-                        <!-- If we need navigation buttons -->
-                        <div class="swiper-button-prev">11111</div>
-                        <div class="swiper-button-next">22222</div>
-                    
-                        <!-- If we need scrollbar -->
-                        <div class="swiper-scrollbar"></div>
-                    </div>
-                    <!-- <div class="slider-and-arrows">
-                        <img class="larch" src="./style/img/LeftArch.png">
-                        <div class="slider-projects">
+                        <div class="swiper-slide">
                             <div class="slider-projects__item">
                                 <img class="slider-projects__item-img" src="./style/img/Project1.png">
                                 <div class="slider-projects__item-description">
@@ -439,22 +423,26 @@
                                 </div>
                                 <button class="projects-btn">СМОТРЕТЬ</button>
                             </div>
+                        </div>
+                        <div class="swiper-slide">
                             <div class="slider-projects__item">
                                 <img class="slider-projects__item-img" src="./style/img/Project2.png">
                                 <div class="slider-projects__item-description">
-                                    <h2>ВЫМПЕЛ</h2>
+                                    <h2>Вымпел</h2>
                                     <h3>Жилой дом — 1800 м2</h3>
                                     <hr>
                                     <p>
-                                        4 приточно-вытяжных установки Enervent с роторным рекуператором 
+                                        4 приточно-вытяжных установки Enervent с роторным рекуператором <br><br>
                                         Вентиляция бассейна <br><br>
                                         Мультизональная система ондиционирования
                                         Daikin с канальными внутренними блоками <br><br>
-                                        Умный дом
+                                        Умный дом    
                                     </p>
                                 </div>
                                 <button class="projects-btn">СМОТРЕТЬ</button>
                             </div>
+                        </div>
+                        <div class="swiper-slide">
                             <div class="slider-projects__item">
                                 <img class="slider-projects__item-img" src="./style/img/Project3.png">
                                 <div class="slider-projects__item-description">
@@ -469,6 +457,8 @@
                                 </div>
                                 <button class="projects-btn">СМОТРЕТЬ</button>
                             </div>
+                        </div>
+                        <div class="swiper-slide">
                             <div class="slider-projects__item">
                                 <img class="slider-projects__item-img" src="./style/img/Project4.png">
                                 <div class="slider-projects__item-description">
@@ -484,33 +474,38 @@
                                 <button class="projects-btn">СМОТРЕТЬ</button>
                             </div>
                         </div>
-                        <img class="rarch" src="./style/img/RigthArch.png">
-                    </div> -->
-                    <!-- <div class="slider-and-arrows-mob">
-                        <div class="slider">
-                            <div class="slider-item">
-                                <img src="./style/img/Project1Mobile.png">
-                                <div class="slider-item__description">
-                                    <div class="slider-item__nav">
-                                        <img id="backProject" src="./style/img/LeftArch.png">
-                                        <div>
-                                            <h2 id="projectH2">ЛЕОНОВО</h2>
-                                            <h3 id="projectH3">Жилой дом — 2500 м2</h3>
-                                        </div>
-                                        <img id="nextProject" src="./style/img/RigthArch.png">
-                                    </div>
+                        <div class="swiper-slide">
+                            <div class="slider-projects__item">
+                                <img class="slider-projects__item-img" src="./style/img/Project1.png">
+                                <div class="slider-projects__item-description">
+                                    <h2>НАРОФОМИНСК</h2>
+                                    <h3>Жилой дом — 350 м2</h3>
                                     <hr>
-                                    <p id="projectP">4 приточно-вытяжных установки Enervent
-                                        с роторным рекуператором
-                                        <br><br>
-                                       Вентиляция бассейна
-                                       <br><br>
-                                       Мультизональная система кондиционирования Daikin с канальными внутренними блоками</p>
+                                    <p>
+                                        Энергоэффективный дом класса А+ <br><br>
+                                        Приточно вытяжная установка Enervent
+                                        c геотермальным охлаждением
+                                    </p>
                                 </div>
-                                <button type="button">СМОТРЕТЬ</button>
-                            </div> 
+                                <button class="projects-btn">СМОТРЕТЬ</button>
+                            </div>
                         </div>
-                    </div> -->
+                        </div>
+                        
+                        <!-- If we need navigation buttons -->
+                        <!-- <div class="swiper-button-prev">
+                            <img src="./style/img/LeftArch.png">
+                        </div>
+                        <div class="swiper-button-next">
+                            <img src="./style/img/RigthArch.png">
+                        </div> -->
+                    </div>
+                        <div class="swiper-button-prev">
+                            <img src="./style/img/LeftArch.png">
+                        </div>
+                        <div class="swiper-button-next">
+                            <img src="./style/img/RigthArch.png">
+                        </div>
                     <div class="a-descr">
                         <a href="#"><i>Все проекты компании</i></a>
                     </div>
@@ -784,6 +779,7 @@
     </footer>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="./js/swiper.js"></script>
     <script src="./js/script.js"></script>
 </body>
 </html>
